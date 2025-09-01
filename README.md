@@ -1,5 +1,5 @@
 # Portfolio site
-The aim of this project is to get experience in developing websites using modern techs
+The goal of this project is to gain experience in developing websites using modern technologies.
 - GoLang
 - SQL database
 - JavaScript
