@@ -1,5 +1,4 @@
 .*
 *.exe
-.DS_Store
 /bin/
 eslint.config.js
