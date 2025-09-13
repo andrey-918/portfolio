@@ -1,11 +1,5 @@
-.env
-
+.*
 *.exe
-
 .DS_Store
-
 /bin/
-
-_obj
-_test
-vendor/
+eslint.config.js
