@@ -1,8 +1,0 @@
-node_modules/
-frontend/
-backend/
-*.go
-go.*
-.env
-dist/
-build/
