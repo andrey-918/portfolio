@@ -18,7 +18,8 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({
       description: 'Многофункциональное портфолио с блогом и проектами',
       technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
       category: 'Full-stack',
-      createdAt: '2025-09-14'
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
     }
   ]
 

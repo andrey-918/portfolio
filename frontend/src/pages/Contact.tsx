@@ -10,6 +10,13 @@ import {
 } from '../components/UI/PugForm'
 import '../styles/Contact.css'
 
+import { 
+  validateField, 
+  validateForm, 
+  contactFormValidation,
+  ValidationResult 
+} from '../utils/validation'
+
 interface SocialLink {
   name: string
   url: string
@@ -26,13 +33,68 @@ export const Contact: React.FC = () => {
     message: ''
   })
 
+  const [errors, setErrors] = useState<Record<string, string[]>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    
+    // Валидация на лету
+    if (errors[name]) {
+      const validation = validateField(name, value, contactFormValidation)
+      setErrors(prev => ({
+        ...prev,
+        [name]: validation.isValid ? [] : validation.errors
+      }))
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Сначала валидация
+    const validationResults = validateForm(formData, contactFormValidation)
+    const newErrors: Record<string, string[]> = {}
+    let isFormValid = true
+
+    Object.entries(validationResults).forEach(([fieldName, result]) => {
+      if (!result.isValid) {
+        newErrors[fieldName] = result.errors
+        isFormValid = false
+      }
+    })
+
+    setErrors(newErrors)
+
+    if (!isFormValid) {
+      const firstErrorField = Object.keys(newErrors)[0]
+      document.getElementById(firstErrorField)?.focus()
+      return
+    }
+
+    // Если форма валидна - отправляем
+    setIsSubmitting(true)
+    try {
+      console.log('Отправка формы:', formData)
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', company: '', subject: '', message: '' })
+      setErrors({}) // очищаем ошибки после успешной отправки
+      setTimeout(() => setSubmitStatus('idle'), 3000)
+    } catch (error) {
+      setSubmitStatus('error')
+      setTimeout(() => setSubmitStatus('idle'), 3000)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   const socialLinks: SocialLink[] = [
     {
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/andrey-918',
       icon: '🐙',
       username: '@andrey-918'
     },
@@ -44,7 +106,7 @@ export const Contact: React.FC = () => {
     },
     {
       name: 'Telegram',
-      url: 'https://t.me/yourusername',
+      url: 'https://t.me/andrey_918',
       icon: '✈️',
       username: '@andrey_918'
     },
@@ -55,29 +117,6 @@ export const Contact: React.FC = () => {
       username: 'karganov.an@yandex.ru'
     }
   ]
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      console.log('Отправка формы:', formData)
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', company: '', subject: '', message: '' })
-      setTimeout(() => setSubmitStatus('idle'), 3000)
-    } catch (error) {
-      setSubmitStatus('error')
-      setTimeout(() => setSubmitStatus('idle'), 3000)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <div className="contact-page">
@@ -140,6 +179,13 @@ export const Contact: React.FC = () => {
                     placeholder="Ваше имя"
                     className="form-input"
                   />
+                  {errors.name && (
+                    <div className="error-messages">
+                      {errors.name.map((error, index) => (
+                        <span key={index} className="error-message">• {error}</span>
+                      ))}
+                    </div>
+                  )}
                 </FormGroup>
                 
                 <FormGroup className="form-group">
@@ -156,6 +202,13 @@ export const Contact: React.FC = () => {
                     placeholder="your.email@example.com"
                     className="form-input"
                   />
+                  {errors.email && (
+                    <div className="error-messages">
+                      {errors.email.map((error, index) => (
+                        <span key={index} className="error-message">• {error}</span>
+                      ))}
+                    </div>
+                  )}
                 </FormGroup>
               </FormRow>
 
@@ -172,6 +225,13 @@ export const Contact: React.FC = () => {
                   placeholder="Укажите, кого представляете"
                   className="form-input"
                 />
+                {errors.company && (
+                  <div className="error-messages">
+                    {errors.company.map((error, index) => (
+                      <span key={index} className="error-message">• {error}</span>
+                    ))}
+                  </div>
+                )}
               </FormGroup>
 
               <FormGroup className="form-group">
@@ -187,6 +247,13 @@ export const Contact: React.FC = () => {
                   placeholder="О чем хотите поговорить?"
                   className="form-input"
                 />
+                {errors.subject && (
+                  <div className="error-messages">
+                    {errors.subject.map((error, index) => (
+                      <span key={index} className="error-message">• {error}</span>
+                    ))}
+                  </div>
+                )}
               </FormGroup>
 
               <FormGroup className="form-group">
@@ -203,6 +270,13 @@ export const Contact: React.FC = () => {
                   placeholder="Расскажите о вашем проекте или задайте вопрос..."
                   className="form-textarea"
                 />
+                {errors.message && (
+                  <div className="error-messages">
+                    {errors.message.map((error, index) => (
+                      <span key={index} className="error-message">• {error}</span>
+                    ))}
+                  </div>
+                )}
               </FormGroup>
 
               <Button
