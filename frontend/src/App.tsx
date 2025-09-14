@@ -1,40 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-
-interface Project {
-  id: number
-  title: string
-}
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Header } from './components/Layout/Header'
+import { Footer } from './components/Layout/Footer'
+import { Home } from './pages/Home'
+import { Projects } from './pages/Projects'
+import { Blog } from './pages/Blog'
+import { About } from './pages/About'
+import { Contact } from './pages/Contact'
+import './styles/style.css'
 
 function App() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    axios.get('/api/projects')
-      .then(response => {
-        setProjects(response.data)
-        setLoading(false)
-      })
-      .catch(error => {
-        console.error('Error fetching projects:', error)
-        setLoading(false)
-      })
-  }, [])
-
-  if (loading) return <div>Loading...</div>
-
   return (
-    <div>
-      <h1>My Portfolio</h1>
-      <div>
-        {projects.map(project => (
-          <div key={project.id}>
-            <h3>{project.title}</h3>
-          </div>
-        ))}
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-    </div>
+    </Router>
   )
 }
 
