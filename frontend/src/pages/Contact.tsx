@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FaGithub, FaLinkedin, FaTelegram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import {
   PugForm,
   FormGroup,
@@ -20,7 +21,7 @@ import {
 interface SocialLink {
   name: string
   url: string
-  icon: string
+  icon: React.ReactNode
   username: string
 }
 
@@ -95,25 +96,25 @@ export const Contact: React.FC = () => {
     {
       name: 'GitHub',
       url: 'https://github.com/andrey-918',
-      icon: '🐙',
+      icon: <FaGithub size={20} color='#333' />,
       username: '@andrey-918'
     },
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/yourprofile',
-      icon: '💼',
+      icon: <FaLinkedin size={20} color='#0077B5'/>,
       username: 'yourname'
     },
     {
       name: 'Telegram',
       url: 'https://t.me/andrey_918',
-      icon: '✈️',
+      icon: <FaTelegram size={20} color='#0088cc' />,
       username: '@andrey_918'
     },
     {
       name: 'Email',
       url: 'mailto:karganov.an@yandex.ru',
-      icon: '📧',
+      icon: <FaEnvelope size={20} color=''/>,
       username: 'karganov.an@yandex.ru'
     }
   ]
@@ -151,10 +152,10 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="additional-info">
-              <h3>📍 Локация</h3>
+              <h3><FaMapMarkerAlt style={{ marginRight: '8px', color: '#ff4444'}} /> Локация</h3>
               <p>Москва, Россия</p>
               
-              <h3>⏰ Время ответа</h3>
+              <h3><FaClock style={{ marginRight: '8px', color: 'grey'}} /> Время ответа</h3>
               <p>Обычно отвечаю в течение 24 часов</p>
             </div>
           </div>

@@ -44,7 +44,6 @@ body {
   min-height: calc(100vh - 120px);
 }
 
-/* Hero section */
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -62,7 +61,6 @@ body {
   opacity: 0.9;
 }
 
-/* Skills section */
 .skills {
   padding: 4rem 0;
   background: #f8f9fa;
@@ -172,7 +170,6 @@ body {
   font-size: 0.8rem;
 }
 
-/* Footer */
 .footer {
   background: #333;
   color: white;
@@ -200,7 +197,6 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer .container {
     flex-direction: column;
@@ -211,8 +207,6 @@ body {
     font-size: 2rem;
   }
 }
-
-
 
 .form-input.error {
   border-color: #dc3545;

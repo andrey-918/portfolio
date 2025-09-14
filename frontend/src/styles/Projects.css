@@ -1,0 +1,45 @@
+.live-demo-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.live-demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.live-demo-btn:active {
+  transform: translateY(0);
+}
+
+.live-demo-btn.minimal {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 0.5rem 1rem;
+}
+
+.live-demo-btn.minimal:hover {
+  background: #667eea;
+  color: white;
+}
+
+.github-btn {
+  background: #24292e;
+  margin-left: 0.5rem;
+}
+
+.github-btn:hover {
+  background: #999f9b;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}

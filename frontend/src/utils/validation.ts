@@ -77,8 +77,6 @@ export const contactFormValidation: FieldValidation = {
   ]
 }
 
-
-// Основная функция валидации
 export const validateField = (
   fieldName: string,
   value: string,
@@ -99,7 +97,6 @@ export const validateField = (
   }
 }
 
-// Валидация всей формы
 export const validateForm = (
   formData: Record<string, string>,
   validationRules: FieldValidation
