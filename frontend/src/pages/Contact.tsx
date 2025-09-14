@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success')
       setFormData({ name: '', email: '', company: '', subject: '', message: '' })
-      setErrors({}) // очищаем ошибки после успешной отправки
+      setErrors({})
       setTimeout(() => setSubmitStatus('idle'), 3000)
     } catch (error) {
       setSubmitStatus('error')
