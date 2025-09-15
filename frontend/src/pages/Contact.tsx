@@ -101,9 +101,9 @@ export const Contact: React.FC = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourprofile',
+      url: '',
       icon: <FaLinkedin size={20} color='#0077B5'/>,
-      username: 'yourname'
+      username: 'andrey'
     },
     {
       name: 'Telegram',
