@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import eslint from 'vite-plugin-eslint2'
+import eslint from '@nabla/vite-plugin-eslint'
 
 export default defineConfig({
+  plugins: [
+    react(),
+    eslint() // простой вызов без конфигурации
+  ],
   server: {
-    //port: 4000,
     proxy: {
       '/api': {
         target: 'http://localhost:8080',
@@ -14,11 +17,5 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist'
-  },
-  plugins: [
-    react(),
-    eslint({
-      include: ['src/**/*.ts', 'src/**/*.tsx']
-    })
-  ]
+  }
 })
