@@ -1,9 +1,0 @@
-# Исключить ненужные папки из обработки
-exclude:
-  - frontend/node_modules/
-  - node_modules/
-  - package.json
-  - package-lock.json
-  - .gitignore
-  - README.md
-  - assets/css/style.scss.liquid
