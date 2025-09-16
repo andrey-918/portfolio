@@ -7,7 +7,6 @@ export const Navigation: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Главная' },
     { path: '/projects', label: 'Проекты' },
-    { path: '/blog', label: 'Блог' },
     { path: '/about', label: 'Обо мне' },
     { path: '/contact', label: 'Контакты' }
   ]

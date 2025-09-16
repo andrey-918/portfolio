@@ -15,7 +15,6 @@ import {
   validateField, 
   validateForm, 
   contactFormValidation,
-  ValidationResult 
 } from '../utils/validation'
 
 interface SocialLink {
@@ -42,7 +41,6 @@ export const Contact: React.FC = () => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     
-    // Валидация на лету
     if (errors[name]) {
       const validation = validateField(name, value, contactFormValidation)
       setErrors(prev => ({
@@ -55,7 +53,6 @@ export const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Сначала валидация
     const validationResults = validateForm(formData, contactFormValidation)
     const newErrors: Record<string, string[]> = {}
     let isFormValid = true
@@ -75,7 +72,6 @@ export const Contact: React.FC = () => {
       return
     }
 
-    // Если форма валидна - отправляем
     setIsSubmitting(true)
     try {
       console.log('Отправка формы:', formData)
