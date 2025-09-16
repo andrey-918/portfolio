@@ -2,3 +2,4 @@
 *.exe
 /bin/
 eslint.config.js
+node_modules
