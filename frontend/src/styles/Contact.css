@@ -248,3 +248,27 @@
     margin-bottom: 0.5rem;
   }
 }
+
+.social-icon svg {
+  transition: color 0.3s ease;
+}
+
+.light-theme .social-icon-github {
+  color: #333;
+}
+
+.light-theme .social-icon-telegram {
+  color: #0088cc;
+}
+
+.dark-theme .social-icon-github {
+  color: #f0f0f0;
+}
+
+.dark-theme .social-icon-telegram {
+  color: #6ab3f3;
+}
+
+.github-icon {
+  color: var(--github-icon);
+}

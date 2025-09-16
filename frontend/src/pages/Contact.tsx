@@ -10,7 +10,6 @@ import {
   Button
 } from '../components/UI/PugForm'
 import '../styles/Contact.css'
-import { useTheme } from '../utils/ThemeContext'
 
 import { 
   validateField, 
@@ -37,7 +36,6 @@ export const Contact: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string[]>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const { isDark } = useTheme()
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -94,13 +92,13 @@ export const Contact: React.FC = () => {
     {
       name: 'GitHub',
       url: 'https://github.com/andrey-918',
-      icon: <FaGithub size={20} color={isDark ? '#f0f0f0' : '#333'}/>,
+      icon: <FaGithub size={20} className='social-icon-github'/>,
       username: '@andrey-918'
     },
     {
       name: 'Telegram',
       url: 'https://t.me/andrey_918',
-      icon: <FaTelegram size={20} color={isDark ? '#6ab3f3' : '#0088cc'}/>,
+      icon: <FaTelegram size={20} className="social-icon-telegram"/>,
       username: '@andrey_918'
     },
     {

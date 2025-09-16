@@ -12,6 +12,8 @@
   --border-color: #e9ecef;
   --accent-color: #007bff;
   --card-bg: #fff;
+  --github-icon: #333;
+  --telegram-icon: #0088cc;
 }
 
 .dark-theme {
@@ -22,26 +24,23 @@
   --border-color: #404040;
   --accent-color: #3b82f6;
   --card-bg: #2d2d2d;
+  --github-icon: #f0f0f0;;
+  --telegram-icon: #6ab3f3
 }
 
-:root {
-  --bg-primary: #fff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #333;
-  --text-secondary: #666;
-  --border-color: #e9ecef;
-  --accent-color: #007bff;
-  --card-bg: #fff;
-}
-
-.dark-theme {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --text-primary: #f0f0f0;
-  --text-secondary: #a0a0a0;
-  --border-color: #404040;
-  --accent-color: #3b82f6;
-  --card-bg: #2d2d2d;
+/* Автоматическое определение системной темы */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-theme) {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --border-color: #404040;
+    --accent-color: #3b82f6;
+    --card-bg: #2d2d2d;
+    --github-icon: #f0f0f0;;
+    --telegram-icon: #0088cc;
+  }
 }
 
 body {
@@ -251,5 +250,13 @@ body, .header, .footer {
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, label, input, textarea, button, .theme-toggle, .project-card, .skill-level, .navigation a, .contact-content {
-  transition: all 1s ease;
+  transition: all 0.3s ease;
+}
+
+.social-icon-telegram {
+  color: var(--telegram-icon);
+}
+
+.social-icon-github {
+  color: var(--github-icon);
 }
