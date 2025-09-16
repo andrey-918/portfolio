@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaGithub, FaLinkedin, FaTelegram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaGithub, FaTelegram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import {
   PugForm,
   FormGroup,
@@ -94,12 +94,6 @@ export const Contact: React.FC = () => {
       url: 'https://github.com/andrey-918',
       icon: <FaGithub size={20} color='#333' />,
       username: '@andrey-918'
-    },
-    {
-      name: 'LinkedIn',
-      url: '',
-      icon: <FaLinkedin size={20} color='#0077B5'/>,
-      username: 'andrey'
     },
     {
       name: 'Telegram',

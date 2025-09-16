@@ -9,8 +9,3 @@ export interface Project {
   category: string
   createdAt: string
 }
-
-export interface ProjectFilters {
-  category?: string
-  technology?: string
-}

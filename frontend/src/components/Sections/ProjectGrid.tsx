@@ -1,19 +1,77 @@
 import React from 'react'
-import { Project, ProjectFilters } from '../../types'
+import { Project } from '../../types'
 import '../../styles/Projects.css'
 import { FaGithub } from 'react-icons/fa'
 
 interface ProjectGridProps {
   limit?: number
-  filters?: ProjectFilters
 }
 
 export const ProjectGrid: React.FC<ProjectGridProps> = ({
-  limit,
-  filters
+  limit
 }) => {
   // Должен буду получать из бд
   const projects: Project[] = [
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное портфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное портфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное портфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное портфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное портфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
+    {
+      id: 1,
+      title: 'Портфолио сайт',
+      description: 'Многофункциональное порhjiohihhiuhiuhiuhiuhiuhiuhiuhiuhiuhiuтфолио с блогом и проектами',
+      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
+      category: 'Full-stack',
+      createdAt: '2025-09-14',
+      githubUrl: 'https://github.com/andrey-918/portfolio',
+      liveUrl: 'https://github.com/andrey-918'
+    },
     {
       id: 1,
       title: 'Портфолио сайт',
