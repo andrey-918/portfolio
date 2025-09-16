@@ -1,6 +1,8 @@
 .contact-page {
   padding: 2rem 0;
   min-height: calc(100vh - 120px);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .contact-header {
@@ -11,12 +13,12 @@
 .contact-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .contact-header p {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -30,7 +32,7 @@
 
 .contact-info h2 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .social-grid {
@@ -43,8 +45,8 @@
   display: flex;
   align-items: center;
   padding: 1rem;
-  background: white;
-  border: 1px solid #e9ecef;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
@@ -54,7 +56,7 @@
 .social-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-color: #007bff;
+  border-color: var(--accent-color);
 }
 
 .social-icon {
@@ -66,30 +68,30 @@
 
 .social-info h3 {
   margin: 0 0 0.25rem 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .social-info p {
   margin: 0;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .additional-info {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 1.5rem;
   border-radius: 12px;
 }
 
 .additional-info h3 {
   margin: 1rem 0 0.5rem 0;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1rem;
 }
 
 .additional-info p {
   margin: 0;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .additional-info h3:first-child {
@@ -97,15 +99,16 @@
 }
 
 .contact-form-container {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid var(--border-color);
 }
 
 .contact-form-container h2 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .form-row {
@@ -122,23 +125,25 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
 }
 
@@ -150,7 +155,7 @@
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background: #007bff;
+  background: var(--accent-color);
   color: white;
   border: none;
   border-radius: 6px;
