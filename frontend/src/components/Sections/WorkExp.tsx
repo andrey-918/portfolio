@@ -9,9 +9,6 @@ interface WorkExpProps {
 export const WorkExp: React.FC<WorkExpProps> = ({ experiences }) => (
   <div className="workexp-page">
     <div className="container">
-      <div className="workexp-header">
-        <h2>💼 Опыт работы</h2>
-      </div>
       <div className="timeline">
         {experiences.map(exp => (
           <div key={exp.id} className="timeline-item">
