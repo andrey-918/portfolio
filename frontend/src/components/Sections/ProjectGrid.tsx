@@ -1,4 +1,6 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { Project } from '../../types'
 import '../../styles/Projects.css'
 import { FaGithub } from 'react-icons/fa'
@@ -7,82 +9,23 @@ interface ProjectGridProps {
   limit?: number
 }
 
-export const ProjectGrid: React.FC<ProjectGridProps> = ({
-  limit
-}) => {
-  // Должен буду получать из бд
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное порhjiohihhiuhiuhiuhiuhiuhiuhiuhiuhiuhiuтфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    },
-    {
-      id: 1,
-      title: 'Портфолио сайт',
-      description: 'Многофункциональное портфолио с блогом и проектами',
-      technologies: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
-      category: 'Full-stack',
-      createdAt: '2025-09-14',
-      githubUrl: 'https://github.com/andrey-918/portfolio',
-      liveUrl: 'https://github.com/andrey-918'
-    }
-  ]
+export const ProjectGrid: React.FC<ProjectGridProps> = ({ limit }) => {
+  const [projects, setProjects] = useState<Project[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    setLoading(true)
+    axios.get<Project[]>('/api/projects')
+      .then(res => {
+        setProjects(res.data)
+        setError(null)
+      })
+      .catch(err => {
+        setError('Ошибка загрузки проектов')
+      })
+      .finally(() => setLoading(false))
+  }, [])
 
   const displayedProjects = limit ? projects.slice(0, limit) : projects
 
@@ -90,6 +33,8 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({
     <section className="projects">
       <div className="container">
         <h2>Мои проекты</h2>
+        {loading && <div>Загрузка...</div>}
+        {error && <div style={{color: 'red'}}>{error}</div>}
         <div className="projects-grid">
           {displayedProjects.map(project => (
             <div key={project.id} className="project-card">
