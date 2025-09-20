@@ -20,7 +20,6 @@ func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
 			GithubUrl:    "https://github.com/andrey-918/portfolio",
 			LiveUrl:      "https://github.com/andrey-918",
 		},
-		// ... другие проекты ...
 	}
 	json.NewEncoder(w).Encode(projects)
 }
@@ -63,9 +62,18 @@ func EducationHandler(w http.ResponseWriter, r *http.Request) {
 			ID:          1,
 			Institution: "МГТУ им. Баумана",
 			Degree:      "Бакалавр",
-			Field:       "Информатика и вычислительная техника",
-			Period:      "2018 — 2022",
-			Description: "Изучение алгоритмов, ООП, баз данных, сетей.",
+			Field:       "МТ11 (Электроника и наноэлектроника)",
+			Period:      "2022 — н.в.",
+			Description: "Работа с электроникой, программирование микроконтроллеров.",
+			Location:    "Москва",
+		},
+		{
+			ID:          2,
+			Institution: "VK eductaion",
+			Degree:      "Курсы",
+			Field:       "Web-разработка",
+			Period:      "2024 — 2025",
+			Description: "2 семестра изучения алгоритмов, проектирования баз данных и веб-сервисов, веб-разработка на Go.",
 			Location:    "Москва",
 		},
 	}
