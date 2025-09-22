@@ -45,14 +45,14 @@ func ExperienceHandler(w http.ResponseWriter, r *http.Request) {
 		},
 		{
 			ID:           2,
-			Company:      "ООО 'Инновации'",
+			Company:      "Google",
 			Position:     "Full-stack Developer",
 			Period:       "2024 — н.в.",
 			Description:  "Создание и поддержка корпоративных веб-приложений.",
 			Technologies: []string{"Go", "React", "PostgreSQL"},
 			Achievements: []string{"Разработка архитектуры проекта", "Настройка мониторинга"},
-			CompanyUrl:   "https://innovate.ru",
-			Location:     "Санкт-Петербург",
+			CompanyUrl:   "https://google.ru",
+			Location:     "London",
 			Current:      true,
 		},
 	}
@@ -118,7 +118,6 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Загрузка .env (если не загружено)
 	_ = godotenv.Load("../.env")
 	telegramToken := os.Getenv("TELEGRAM_TOKEN")
 	telegramChatID := os.Getenv("TELEGRAM_CHAT_ID")
