@@ -2,9 +2,13 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
+	"net/url"
+	"os"
 
 	"github.com/andrey-918/portfolio/backend/models"
+	"github.com/joho/godotenv"
 )
 
 func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
@@ -113,6 +117,27 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(map[string]string{"error": "Invalid request"})
 		return
 	}
-	// Здесь можно добавить сохранение или отправку email
+
+	// Загрузка .env (если не загружено)
+	_ = godotenv.Load("../.env")
+	telegramToken := os.Getenv("TELEGRAM_TOKEN")
+	telegramChatID := os.Getenv("TELEGRAM_CHAT_ID")
+	msg := fmt.Sprintf(
+		"Новое сообщение с сайта!\nИмя: %s\nEmail: %s\nКомпания: %s\nТема: %s\nСообщение: %s",
+		form.Name, form.Email, form.Company, form.Subject, form.Message,
+	)
+	apiURL := fmt.Sprintf("https://api.telegram.org/bot%s/sendMessage", telegramToken)
+	data := url.Values{}
+	data.Set("chat_id", telegramChatID)
+	data.Set("text", msg)
+
+	resp, err := http.PostForm(apiURL, data)
+	if err != nil || resp.StatusCode >= 400 {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "Не удалось отправить в Telegram"})
+		return
+	}
+	defer resp.Body.Close()
+
 	json.NewEncoder(w).Encode(map[string]string{"status": "ok"})
 }

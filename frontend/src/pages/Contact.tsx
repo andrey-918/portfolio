@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 import { FaGithub, FaTelegram, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import {
   PugForm,
@@ -74,8 +75,7 @@ export const Contact: React.FC = () => {
 
     setIsSubmitting(true)
     try {
-      console.log('Отправка формы:', formData)
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await axios.post('/api/contact', formData)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', company: '', subject: '', message: '' })
       setErrors({})
