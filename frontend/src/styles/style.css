@@ -20,7 +20,7 @@
 .dark-theme {
   --bg-primary: #1a1a1a;
   --bg-secondary: #2d2d2d;
-  --text-primary: #f0f0f0;
+  --text-primary: #f0f0f0a9;
   --text-secondary: #a0a0a0;
   --border-color: #404040;
   --accent-color: #3b82f6;
@@ -34,7 +34,7 @@
   :root:not(.light-theme) {
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
-    --text-primary: #f0f0f0;
+    --text-primary: #f0f0f0a9;
     --text-secondary: #a0a0a0;
     --border-color: #404040;
     --accent-color: #3b82f6;
@@ -91,7 +91,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: rgba(255, 255, 255, 0.787);
   padding: 4rem 0;
   text-align: center;
 }

@@ -5,12 +5,14 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/andrey-918/portfolio/backend/internal/db"
 	"github.com/andrey-918/portfolio/backend/internal/handlers"
 	"github.com/joho/godotenv"
 )
 
 func main() {
 	_ = godotenv.Load("../.env")
+	db.Init()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
