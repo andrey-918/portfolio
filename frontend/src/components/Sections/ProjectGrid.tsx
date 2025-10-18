@@ -45,7 +45,7 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ limit }) => {
                   ))}
                 </div>
                 <span className="category">{project.category}</span>
-                <div className="project-buttons">
+                <div className="project-buttons" style={{ marginTop: 'auto' }}>
                   {project.liveUrl && (
                     <button
                       className="live-demo-btn"

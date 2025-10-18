@@ -15,9 +15,11 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
-  max-width: fit-content;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -61,6 +63,7 @@
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.8rem;
+  align-self: flex-start;
 }
 
 .live-demo-btn {
