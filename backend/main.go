@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/andrey-918/portfolio/backend/internal/cache"
 	"github.com/andrey-918/portfolio/backend/internal/db"
 	"github.com/andrey-918/portfolio/backend/internal/handlers"
 	"github.com/joho/godotenv"
