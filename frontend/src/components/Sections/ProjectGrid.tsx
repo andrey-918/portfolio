@@ -15,10 +15,18 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ limit }) => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    setLoading(true)
+    const cached = localStorage.getItem('projects')
+    if (cached) {
+      setProjects(JSON.parse(cached))
+      setLoading(false)
+    } else {
+      setLoading(true)
+    }
+
     axios.get<Project[]>('/api/projects')
       .then(res => {
         setProjects(res.data)
+        localStorage.setItem('projects', JSON.stringify(res.data))
         setError(null)
       })
       .catch(() => setError('Ошибка загрузки проектов'))
