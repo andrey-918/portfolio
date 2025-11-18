@@ -44,13 +44,8 @@
   margin-bottom: 1rem;
 }
 
-/* Унифицированный стиль tech-tag для всех компонентов */
+/* Переопределение базового стиля tech-tag для Projects */
 .tech-tag {
-  display: inline-block;
-  background: var(--border-color);
-  color: var(--text-primary);
-  border-radius: 4px;
-  padding: 2px 8px;
   font-size: 0.85em;
   margin-right: 4px;
   margin-bottom: 4px;
