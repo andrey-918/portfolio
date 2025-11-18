@@ -17,7 +17,6 @@ export const About: React.FC = () => {
           Мой опыт охватывает frontend и backend, я люблю учиться новому и работать в команде.
         </p>
       </div>
-      <h2>Опыт работы</h2>
       <WorkExp />
       <h2>Образование</h2>
       <EducationList />
