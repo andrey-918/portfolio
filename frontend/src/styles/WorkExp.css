@@ -2,12 +2,12 @@
   margin-bottom: 32px;
 }
 
-.timeline {
+.work-exp-list {
   margin: 0;
   padding: 0;
 }
 
-.timeline-item {
+.work-exp-item {
   background: var(--card-bg);
   border-radius: 8px;
   margin-bottom: 20px;
@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 600px) {
-  .timeline-item {
+  .work-exp-item {
     padding: 12px 8px;
   }
 }
