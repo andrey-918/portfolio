@@ -13,7 +13,6 @@ export const WorkExp: React.FC<WorkExpProps> = ({ experiences }) => (
         {Array.isArray(experiences) && experiences.length > 0 ? (
           experiences.map(exp => (
             <div key={exp.id} className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>{exp.position}</h3>
                 <h4>
