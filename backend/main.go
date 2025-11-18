@@ -13,6 +13,7 @@ import (
 func main() {
 	_ = godotenv.Load("../.env")
 	db.Init()
+	cache.Init() // Initialize cache
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"

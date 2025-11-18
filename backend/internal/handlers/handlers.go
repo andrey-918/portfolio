@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 
+	"github.com/andrey-918/portfolio/backend/internal/cache"
 	"github.com/andrey-918/portfolio/backend/internal/db"
 	"github.com/andrey-918/portfolio/backend/models"
 	"github.com/joho/godotenv"
@@ -16,6 +17,14 @@ import (
 func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
+
+	// Check cache first
+	if cached, found := cache.Get("projects"); found {
+		w.Write([]byte(cached))
+		return
+	}
+
+	// Cache miss, query DB
 	rows, err := db.Pool.Query(context.Background(), `SELECT id, title, description, technologies, image_url, github_url, live_url, category, created_at FROM projects ORDER BY id`)
 	if err != nil {
 		http.Error(w, "DB error", http.StatusInternalServerError)
@@ -44,7 +53,12 @@ func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		projects = append(projects, p)
 	}
-	json.NewEncoder(w).Encode(projects)
+
+	// Encode to JSON and cache
+	data, _ := json.Marshal(projects)
+	cache.Set("projects", string(data))
+
+	w.Write(data)
 }
 
 // pgArrayToStringSlice универсально преобразует PostgreSQL text[] в []string
@@ -98,6 +112,14 @@ func parsePgArrayString(s string) []string {
 
 func ExperienceHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+
+	// Check cache first
+	if cached, found := cache.Get("experience"); found {
+		w.Write([]byte(cached))
+		return
+	}
+
+	// Cache miss, query DB
 	rows, err := db.Pool.Query(r.Context(), `SELECT id, company, position, period, description, technologies, achievements, company_url, location, current FROM work_experience ORDER BY id`)
 	if err != nil {
 		http.Error(w, "DB error", http.StatusInternalServerError)
@@ -117,7 +139,12 @@ func ExperienceHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		experiences = append(experiences, exp)
 	}
-	json.NewEncoder(w).Encode(experiences)
+
+	// Encode to JSON and cache
+	data, _ := json.Marshal(experiences)
+	cache.Set("experience", string(data))
+
+	w.Write(data)
 }
 
 func EducationHandler(w http.ResponseWriter, r *http.Request) {
@@ -142,6 +169,14 @@ func EducationHandler(w http.ResponseWriter, r *http.Request) {
 
 func SkillsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+
+	// Check cache first
+	if cached, found := cache.Get("skills"); found {
+		w.Write([]byte(cached))
+		return
+	}
+
+	// Cache miss, query DB
 	rows, err := db.Pool.Query(r.Context(), `SELECT name, category, level FROM skills ORDER BY id`)
 	if err != nil {
 		http.Error(w, "DB error", http.StatusInternalServerError)
@@ -157,7 +192,12 @@ func SkillsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		skills = append(skills, s)
 	}
-	json.NewEncoder(w).Encode(skills)
+
+	// Encode to JSON and cache
+	data, _ := json.Marshal(skills)
+	cache.Set("skills", string(data))
+
+	w.Write(data)
 }
 
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
