@@ -1,0 +1,71 @@
+-- MySQL INSERT statements for portfolio data
+
+INSERT INTO work_experience (company, position, period, description, technologies, achievements, company_url, location, current)
+VALUES (
+  'ООО "СМ ГРУПП"',
+  'Разработчик',
+  '2025 - н.в.',
+  'Создание сайтов, поддержание их актуальности, обновление информации, исправление багов, добавление нового функционала.',
+  '{"PHP", "HTML", "JavaScript", "TypeScript", "HTML", "Vite"}',
+  '{"Создал сайт для поставок цемента из Ирана", "Разработал несколько новых разделов", "Создал систему парсинга товаров"}',
+  'https://tk-cm.ru',
+  'Москва',
+  true
+);
+
+INSERT INTO education (institution, degree, field, period, description, location)
+VALUES (
+  'МГТУ им. Н.Э. Баумана',
+  'Бакалавр',
+  'МТ11 (Электроника и наноэлектроника)',
+  '2022 - н.в.',
+  'Изучение основ прикладной электроники, программирование микропроцессоров',
+  'Москва'
+);
+
+INSERT INTO education (institution, degree, field, period, description, location)
+VALUES (
+  'VK Education',
+  'Курсы',
+  'Web-разработка',
+  '2024 - 2025',
+  '3 семестра изучения алгоритмов, проектирования баз данных и веб-сервисов, расчет высоконагруженных систем, веб-разработка на Go.',
+  'Москва'
+);
+
+INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
+VALUES (
+  'Портфолио сайт',
+  'Многофункциональное портфолио с информацией о проектах, образовании и опыте работы',
+  '{"Go", "MySQL", "TypeScript", "React", "Vite"}',
+  'URL_картинки',
+  'https://github.com/andrey-918/portfolio',
+  'https://karganov-an.ru',
+  'Full-stack',
+  '2025-09-14'
+);
+
+INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
+VALUES (
+  'Цемент из Ирана',
+  'Одностраничный сайт с информацией о поставках цемента из Ирана через компанию ООО "СМ Групп"',
+  '{"TypeScript", "HTML", "Vite", "CSS"}',
+  'URL_картинки',
+  'https://github.com/andrey-918/cement',
+  'https://cementiran.ru',
+  'Frontend',
+  '2025-10-18'
+);
+
+INSERT INTO skills (name, category, level)
+VALUES
+  ('Go', 'Backend', 80),
+  ('PostgreSQL', 'Database', 70),
+  ('MySQL', 'Database', 70),
+  ('React', 'Frontend', 65),
+  ('TypeScript', 'Frontend', 70),
+  ('JavaScript', 'Frontend', 75),
+  ('HTML', 'Frontend', 90),
+  ('CSS', 'Frontend', 80),
+  ('Docker', 'DevOps', 65),
+  ('Git', 'Tools', 80);
