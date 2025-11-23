@@ -1,0 +1,14 @@
+/* Image With Fallback Styles */
+.image-with-fallback {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-with-fallback-loading {
+  opacity: 0.5;
+}
+
+.image-with-fallback-error {
+  opacity: 0.7;
+}

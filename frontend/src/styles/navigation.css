@@ -1,0 +1,136 @@
+/* Navigation Styles */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-transparent {
+  background-color: transparent;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-logo-scrolled {
+  color: #000000;
+}
+
+.nav-logo-transparent {
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-link-scrolled {
+  color: #000000;
+}
+
+.nav-link-transparent {
+  color: #ffffff;
+}
+
+.nav-mobile-btn {
+  display: block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .nav-mobile-btn {
+    display: none;
+  }
+}
+
+.nav-mobile-btn-scrolled {
+  color: #000000;
+}
+
+.nav-mobile-btn-transparent {
+  color: #ffffff;
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-color: #ffffff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.nav-mobile-menu.active {
+  display: flex;
+}
+
+.nav-mobile-link {
+  font-size: 2rem;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.nav-mobile-link:hover {
+  opacity: 0.7;
+}

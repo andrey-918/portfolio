@@ -1,0 +1,182 @@
+/* Work Experience Section Styles */
+.work-experience-section {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.work-experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .work-experience-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.work-experience-header {
+  margin-bottom: 4rem;
+}
+
+.work-experience-badge {
+  display: inline-block;
+  background-color: #000000;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.work-experience-badge-text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.work-experience-title {
+  font-size: 3.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  .work-experience-title {
+    font-size: 4.5rem;
+  }
+}
+
+.work-experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .experience-item {
+    flex-direction: row;
+  }
+}
+
+.experience-period {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .experience-period {
+    width: 25%;
+  }
+}
+
+.experience-period-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.experience-current-badge {
+  display: inline-block;
+  background-color: #dcfce7;
+  color: #166534;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.experience-content {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .experience-content {
+    width: 75%;
+  }
+}
+
+.experience-position {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.experience-company {
+  font-size: 1.5rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.experience-company-link {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.experience-company-link:hover {
+  text-decoration: underline;
+}
+
+.experience-location {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.experience-technologies {
+  margin-bottom: 1rem;
+}
+
+.experience-tech-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.experience-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-tech-item {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.experience-achievements {
+  /* No specific styles needed */
+}
+
+.experience-achievements-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.experience-achievements-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #374151;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
