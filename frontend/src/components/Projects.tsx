@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import '../styles/projects.css';
 
 interface Project {
   id: number;
@@ -25,7 +26,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="projects-section">
-      <div className="projects-container">
+      <div className="global-container">
         <div className="projects-header">
           <div className="projects-badge">
             <span className="projects-badge-text">Creative Presentation</span>
@@ -46,7 +47,7 @@ export function Projects() {
                   alt={project.title}
                   className="project-image"
                 />
-                <div className="project-overlay" />
+                <div className="project-overlay"></div>
               </div>
               <div className="project-info">
                 <p className="project-category">{project.category}</p>

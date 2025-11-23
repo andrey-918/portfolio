@@ -1,0 +1,117 @@
+/* Education Section Styles */
+.education-section {
+  min-height: 100vh;
+  background-color: #f5f1ed;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .education-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.education-content {
+  /* Content container styles */
+}
+
+.education-badge {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.education-badge-text {
+  color: #000000;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.education-h2 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .education-h2 {
+    font-size: 4.5rem;
+  }
+}
+
+.education-description {
+  color: #374151;
+  margin-bottom: 3rem;
+  max-width: 28rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-item-period {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-item-description {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.education-photo-container {
+  position: relative;
+}
+
+.education-photo-wrapper {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.education-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-bottom-badge {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #000000;
+  padding: 0.5rem 1rem;
+}
+
+.education-bottom-badge-text {
+  color: #ffffff;
+  font-size: 0.75rem;
+}

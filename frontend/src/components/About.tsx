@@ -4,7 +4,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export function About() {
   return (
     <section id="about" className="about-section">
-      <div className="about-container">
+      <div className="global-container">
         <div className="about-grid">
           {/* Left - Photo */}
           <div className="about-photo-container">

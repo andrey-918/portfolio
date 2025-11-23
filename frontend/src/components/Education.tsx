@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import '../styles/education.css';
 
 interface EducationItem {
   id: number;
@@ -23,7 +24,7 @@ export function Education() {
 
   return (
     <section id="education" className="education-section">
-      <div className="education-container">
+      <div className="global-container ">
         <div className="education-grid">
           {/* Left - Content */}
           <div className="education-content">

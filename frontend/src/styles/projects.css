@@ -1,0 +1,150 @@
+/* Projects Section */
+.projects-section {
+  min-height: 100vh;
+  background-color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (width >= 48rem) {
+  .projects-container {
+    max-width: 48rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .projects-container {
+    max-width: 64rem;
+  }
+}
+
+@media (width >= 80rem) {
+  .projects-container {
+    max-width: 80rem;
+  }
+}
+
+@media (width >= 96rem) {
+  .projects-container {
+    max-width: 96rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .projects-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.projects-header {
+  margin-bottom: 4rem;
+}
+
+.projects-badge {
+  background-color: #000;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects-badge-text {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.projects-h2 {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+@media (width >= 64rem) {
+  .projects-h2 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (width >= 48rem) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 64rem) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 0.2;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-image-wrapper {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.project-info {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.project-category {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  margin: 0;
+}

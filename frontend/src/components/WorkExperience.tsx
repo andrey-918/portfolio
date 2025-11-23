@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import '../styles/work-experience.css';
 
 interface ExperienceItem {
   id: number;
@@ -8,6 +9,7 @@ interface ExperienceItem {
   period: string;
   description: string;
   technologies: string[];
+  achievements: string[];
   location: string;
 }
 
@@ -23,52 +25,56 @@ export function WorkExperience() {
 
   return (
     <section id="experience" className="work-experience-section">
-      <div className="work-experience-container">
-        <div className="work-experience-grid">
-          {/* Left - Content */}
-          <div className="work-experience-content">
-            <div className="work-experience-badge">
-              <span className="work-experience-badge-text">Creative Presentation</span>
-            </div>
+      <div className="global-container">
+        <div className="work-experience-header">
+          <div className="work-experience-badge">
+            <span className="work-experience-badge-text">Professional Journey</span>
+          </div>
+          <h2 className="work-experience-title">
+            WORK<br />
+            EXPERIENCE
+          </h2>
+        </div>
 
-            <h2 className="work-experience-h2">
-              MY<br />
-              WORK<br />
-              EXPERIENCE
-            </h2>
+        <div className="work-experience-timeline">
+          {experienceItems.map((item, index) => (
+            <div key={index} className="experience-item">
+              <div className="experience-period">
+                <p className="experience-period-text">{item.period}</p>
+                {index === 0 && (
+                  <span className="experience-current-badge">Current</span>
+                )}
+              </div>
+              <div className="experience-content">
+                <h3 className="experience-position">{item.position}</h3>
+                <p className="experience-company">
+                  <a href="#" className="experience-company-link">{item.company}</a>
+                </p>
+                <p className="experience-location">{item.location}</p>
+                <p className="experience-description">{item.description}</p>
 
-            <p className="work-experience-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            {/* Experience List */}
-            <div className="work-experience-list">
-              {experienceItems.map((item, index) => (
-                <div key={index} className="work-experience-item">
-                  <h3>{item.company}</h3>
-                  <p className="work-experience-item-position">{item.position}</p>
-                  <p className="work-experience-item-period">{item.period}</p>
-                  <p className="work-experience-item-description">
-                    {item.description}
-                  </p>
+                <div className="experience-technologies">
+                  <h4 className="experience-tech-title">Technologies</h4>
+                  <div className="experience-tech-list">
+                    {item.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="experience-tech-item">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Right - Photo */}
-          <div className="work-experience-photo-container">
-            <div className="work-experience-photo-wrapper">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3Jrc3BhY2UlMjBvZmZpY2V8ZW58MXx8fHwxNzYzODk1OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Office workspace"
-                className="work-experience-photo"
-              />
+                <div className="experience-achievements">
+                  <h4 className="experience-achievements-title">Key Achievements</h4>
+                  <ul className="experience-achievements-list">
+                    {item.achievements.map((achievement, achIndex) => (
+                      <li key={achIndex}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="work-experience-bottom-badge">
-              <span className="work-experience-bottom-badge-text">May 09, 2026</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
