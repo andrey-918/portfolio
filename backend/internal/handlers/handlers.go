@@ -112,6 +112,7 @@ func parsePgArrayString(s string) []string {
 
 func ExperienceHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	// Check cache first
 	if cached, found := cache.Get("experience"); found {
@@ -169,6 +170,7 @@ func EducationHandler(w http.ResponseWriter, r *http.Request) {
 
 func SkillsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	// Check cache first
 	if cached, found := cache.Get("skills"); found {
@@ -202,6 +204,13 @@ func SkillsHandler(w http.ResponseWriter, r *http.Request) {
 
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
 	if r.Method != http.MethodPost {
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		json.NewEncoder(w).Encode(map[string]string{"error": "Method not allowed"})
@@ -221,7 +230,7 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_ = godotenv.Load("../.env")
+	_ = godotenv.Load("../../.env")
 	telegramToken := os.Getenv("TELEGRAM_TOKEN")
 	telegramChatID := os.Getenv("TELEGRAM_CHAT_ID")
 	msg := fmt.Sprintf(
