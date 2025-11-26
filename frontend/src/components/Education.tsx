@@ -58,7 +58,7 @@ export function Education() {
           <div className="education-photo-container">
             <div className="education-photo-wrapper">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1639414839074-51d49728c748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwbGlicmFyeSUyMGJvb2tzfGVufDF8fHx8MTc2Mzg5NTk4NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://i.pinimg.com/1200x/2a/70/2e/2a702ed780e9b9d6d88a2574f428983b.jpg"
                 alt="Books and library"
                 className="education-photo"
               />

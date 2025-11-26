@@ -13,7 +13,7 @@ export function About() {
             </div>
             <div className="about-photo-wrapper">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1604046744901-d38344fd6129?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBvdXRkb29yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYzODk1OTcyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://i.pinimg.com/1200x/13/eb/49/13eb49d5c45edc7f819c5c0cd76ecb39.jpg"
                 alt="Portrait"
                 className="about-photo"
               />

@@ -8,7 +8,7 @@ export function Hero() {
         <div className="hero-image-container">
           <div className="hero-image-wrapper">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758876022213-fbf6e54ad52e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2UlMjBkZXNrJTIwbGFwdG9wfGVufDF8fHx8MTc2Mzg5NTk1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="https://i.pinimg.com/1200x/11/60/05/1160053e6410ecc7664ecd83350e8762.jpg"
               alt="Workspace"
               className="hero-image"
             />
