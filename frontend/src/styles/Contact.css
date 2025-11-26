@@ -81,12 +81,12 @@
   text-decoration: underline;
 }
 
-.contact-link {
+.link {
   text-decoration: none;
   color: inherit;
 }
 
-.contact-link:hover {
+.link:hover {
   text-decoration: underline;
 }
 
@@ -169,4 +169,11 @@
 
 .contact-field-error div {
   margin-bottom: 0.25rem;
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Расстояние между ссылками */
+  align-items: flex-start; /* Выравнивание по левому краю */
 }

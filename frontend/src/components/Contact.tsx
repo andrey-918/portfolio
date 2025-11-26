@@ -71,12 +71,11 @@ export function Contact() {
       <div className="global-container">
         <div className="contact-inner">
           <div className="contact-badge">
-            <span className="contact-badge-text">Get In Touch</span>
+            <span className="contact-badge-text">Идеи рождаются в диалоге. Давайте обсудим вашу.</span>
           </div>
 
           <h2 className="contact-title">
-            LET'S WORK<br />
-            TOGETHER
+            ГОТОВ К СОТРУДНИЧЕСТВУ
           </h2>
 
           <div className="contact-grid">
@@ -90,17 +89,17 @@ export function Contact() {
             </div>
 
             <div className="contact-info-item">
-              <h3>Location</h3>
+              <h3>Адрес</h3>
               <p>
                 Москва, Россия
               </p>
             </div>
 
             <div className="contact-info-item">
-              <h3>Follow</h3>
-              <div className="flex gap-4">
-                <a href="https://github.com/andrey-918" target="_blank" rel="noopener noreferrer" className="contact-link">GitHub</a>
-                <a href="https://t.me/andrey_918" target="_blank" rel="noopener noreferrer" className="contact-link">Telegram</a>
+              <h3>Соцсети</h3>
+              <div className="contact-socials">
+                <a href="https://github.com/andrey-918" target="_blank" rel="noopener noreferrer" className="link">GitHub</a>
+                <a href="https://t.me/andrey_918" target="_blank" rel="noopener noreferrer" className="link">Telegram</a>
               </div>
             </div>
           </div>
@@ -115,7 +114,7 @@ export function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Your Name *"
+                  placeholder="Имя *"
                   required
                 />
                 {errors.name && (
@@ -133,7 +132,7 @@ export function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="Your Email *"
+                  placeholder="Email *"
                   required
                 />
                 {errors.email && (
@@ -151,7 +150,7 @@ export function Contact() {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  placeholder="Company (optional)"
+                  placeholder="Компания"
                 />
                 {errors.company && (
                   <div className="contact-field-error">
@@ -168,7 +167,7 @@ export function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  placeholder="Subject (optional)"
+                  placeholder="Тема"
                 />
                 {errors.subject && (
                   <div className="contact-field-error">
@@ -184,8 +183,8 @@ export function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Your Message *"
-                  rows={4}
+                  placeholder="Сообщение *"
+                  rows={2}
                   required
                 />
                 {errors.message && (
@@ -206,13 +205,13 @@ export function Contact() {
 
               {submitStatus === 'success' && (
                 <div className="contact-success">
-                  ✅ Message sent! I'll get back to you soon.
+                  ✅ Сообщение отправлено! Я скоро отвечу.
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="contact-error">
-                  ❌ Error sending message. Please try again or contact me directly.
+                  ❌ Ошибка при отправке. Пожалуйста, попробуйте снова или напишите в тг или на почту.
                 </div>
               )}
             </form>

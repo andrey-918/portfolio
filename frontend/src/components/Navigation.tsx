@@ -42,7 +42,7 @@ export function Navigation() {
               onClick={() => scrollToSection('home')}
               className={`nav-logo ${isScrolled ? 'nav-logo-scrolled' : 'nav-logo-transparent'}`}
             >
-              FM
+              Karganov
             </button>
 
             {/* Desktop Navigation */}

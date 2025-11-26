@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import '../styles/work-experience.css';
 
 interface ExperienceItem {
@@ -10,6 +9,7 @@ interface ExperienceItem {
   description: string;
   technologies: string[];
   achievements: string[];
+  companyUrl: string;
   location: string;
 }
 
@@ -28,11 +28,11 @@ export function WorkExperience() {
       <div className="global-container">
         <div className="work-experience-header">
           <div className="work-experience-badge">
-            <span className="work-experience-badge-text">Professional Journey</span>
+            <span className="work-experience-badge-text">«Опыт — это не то, что происходит с человеком, а то, что человек делает с тем, что с ним происходит». — Олдос Хаксли</span>
           </div>
           <h2 className="work-experience-title">
-            WORK<br />
-            EXPERIENCE
+            ОПЫТ<br />
+            РАЗРАБОТКИ
           </h2>
         </div>
 
@@ -42,19 +42,19 @@ export function WorkExperience() {
               <div className="experience-period">
                 <p className="experience-period-text">{item.period}</p>
                 {index === 0 && (
-                  <span className="experience-current-badge">Current</span>
+                  <span className="experience-current-badge">Текущее место работы</span>
                 )}
               </div>
               <div className="experience-content">
                 <h3 className="experience-position">{item.position}</h3>
                 <p className="experience-company">
-                  <a href="#" className="experience-company-link">{item.company}</a>
+                  <a href={item.companyUrl} className="experience-company-link">{item.company}</a>
                 </p>
                 <p className="experience-location">{item.location}</p>
                 <p className="experience-description">{item.description}</p>
 
                 <div className="experience-technologies">
-                  <h4 className="experience-tech-title">Technologies</h4>
+                  <h4 className="experience-tech-title">Технологии</h4>
                   <div className="experience-tech-list">
                     {item.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="experience-tech-item">
@@ -65,7 +65,7 @@ export function WorkExperience() {
                 </div>
 
                 <div className="experience-achievements">
-                  <h4 className="experience-achievements-title">Key Achievements</h4>
+                  <h4 className="experience-achievements-title">Достижения</h4>
                   <ul className="experience-achievements-list">
                     {item.achievements.map((achievement, achIndex) => (
                       <li key={achIndex}>{achievement}</li>

@@ -29,12 +29,11 @@ export function Education() {
           {/* Left - Content */}
           <div className="education-content">
             <div className="education-badge">
-              <span className="education-badge-text">Creative Presentation</span>
+              <span className="education-badge-text">«Я знаю, что ничего не знаю». — Сократ</span>
             </div>
 
             <h2 className="education-h2">
-              MY<br />
-              EDUCATION
+              УЧЁБА
             </h2>
 
             <p className="education-description">
@@ -65,7 +64,7 @@ export function Education() {
               />
             </div>
             <div className="education-bottom-badge">
-              <span className="education-bottom-badge-text">May 09, 2026</span>
+              <span className="education-bottom-badge-text">May 24, 2025</span>
             </div>
           </div>
         </div>

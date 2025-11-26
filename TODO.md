@@ -1,2 +1,0 @@
-- [x] Remove Tailwind and PostCSS dependencies from package.json
-- [x] Verify that CSS files are plain CSS (already done)

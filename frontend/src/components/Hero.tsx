@@ -20,7 +20,7 @@ export function Hero() {
         <div className="hero-flex-container">
           <div className="hero-main-title">
             <div className="hero-badge">
-              <span className="hero-badge-text">Creative Presentation</span>
+              <span className="hero-badge-text">Karganov Andrey</span>
             </div>
             <h1 className="hero-h1">
               PORT<br />FOLIO
@@ -28,14 +28,13 @@ export function Hero() {
           </div>
           <div className="hero-contact-info">
             <div className="hero-date">
-              <p>May 09, 2026</p>
+              <p>May 24, 2025</p>
             </div>
             <div className="hero-contact-list">
-              <p className="hero-contact-item"><span className="hero-contact-label">Phone:</span><span className="hero-contact-value"> +234 456 7890</span></p>
-              <p className="hero-contact-item"><span className="hero-contact-label">Website:</span><span className="hero-contact-value"> francoismercer.com</span></p>
-              <p className="hero-contact-item"><span className="hero-contact-label">Email:</span><span className="hero-contact-value"> contact@myemail.com</span></p>
-              <p className="hero-contact-item"><span className="hero-contact-label">Address:</span><span className="hero-contact-value"> 175 Argon Street</span></p>
-              <p className="hero-contact-item">City, ST 12345</p>
+              <p className="hero-contact-item"><span className="hero-contact-label">Телефон:</span><span className="hero-contact-value"><a href="tel:+7 915 204-96-13" className="link"> +7 (915) 204-96-13</a></span></p>
+              <p className="hero-contact-item"><span className="hero-contact-label">Сайт:</span><span className="hero-contact-value"><a href="karganov-an.ru" className="link"> karganov-an.ru</a></span></p>
+              <p className="hero-contact-item"><span className="hero-contact-label">Почта:</span><span className="hero-contact-value"><a href="mailto:karganov.an@yandex.ru" className="link"> karganov.an@yandex.ru</a></span></p>
+              <p className="hero-contact-item"><span className="hero-contact-label">Локация:</span><span className="hero-contact-value"> Москва</span></p>
             </div>
           </div>
         </div>

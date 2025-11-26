@@ -9,7 +9,7 @@ interface Project {
   technologies: string[];
   image_url: string;
   github_url?: string;
-  live_url?: string;
+  liveUrl?: string;
   category: string;
   created_at: string;
 }
@@ -29,11 +29,10 @@ export function Projects() {
       <div className="global-container">
         <div className="projects-header">
           <div className="projects-badge">
-            <span className="projects-badge-text">Creative Presentation</span>
+            <span className="projects-badge-text">Теория — это основа, а практика — результат.</span>
           </div>
           <h2 className="projects-h2">
-            SELECTED<br />
-            PROJECTS
+            ПРОЕКТЫ
           </h2>
         </div>
 
@@ -51,7 +50,7 @@ export function Projects() {
               </div>
               <div className="project-info">
                 <p className="project-category">{project.category}</p>
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project-title"><a href={project.liveUrl}>{project.title}</a></h3>
               </div>
             </div>
           ))}

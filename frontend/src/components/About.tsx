@@ -9,7 +9,7 @@ export function About() {
           {/* Left - Photo */}
           <div className="about-photo-container">
             <div className="about-badge">
-              <span className="about-badge-text">Creative Presentation</span>
+              <span className="about-badge-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
             </div>
             <div className="about-photo-wrapper">
               <ImageWithFallback
@@ -24,17 +24,17 @@ export function About() {
           {/* Right - Content */}
           <div className="about-content">
             <h2>
-              HELLO, I'M<br />
-              FRANCOIS<br />
-              MERCER
+              ПРИВЕТ, Я<br />
+              АНДРЕЙ
             </h2>
 
             <p className="about-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Full-stack разработчик с фокусом на создании интуитивных и эффективных digital-решений. 
+              Превращаю бизнес-задачи в чистый код и понятные интерфейсы.
             </p>
 
             <div className="about-highlight-badge">
-              <span className="about-highlight-text">May 09, 2026</span>
+              <span className="about-highlight-text">May 24, 2025</span>
             </div>
           </div>
         </div>
