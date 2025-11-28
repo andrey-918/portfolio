@@ -7,7 +7,7 @@ interface Project {
   description: string;
   technologies: string[];
   image_url: string;
-  github_url?: string;
+  githubUrl?: string;
   liveUrl?: string;
   category: string;
   created_at: string;
@@ -48,8 +48,27 @@ export function Projects() {
                 <div className="project-overlay"></div>
               </div>
               <div className="project-info">
-                <p className="project-category">{project.category}</p>
-                <h3 className="project-title"><a href={project.liveUrl}>{project.title}</a></h3>
+                <div className="project-header">
+                  <p className="project-category">{project.category}</p>
+                  <h3 className="project-title">
+                    {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">{project.title}</a> : project.title}
+                  </h3>
+                </div>
+                <div className="project-content">
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-technologies">
+                    {project.technologies.map((tech, idx) => (
+                      <span key={idx} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="project-links">
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
