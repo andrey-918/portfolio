@@ -1,6 +1,6 @@
 /* Work Experience Section Styles */
 .work-experience-section {
-  background-color: #ffffff;
+  background-color: var(--color-beige);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -24,7 +24,7 @@
 }
 
 .work-experience-badge-text {
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }

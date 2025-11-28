@@ -1,6 +1,6 @@
 /* Contact Section Styles */
 .contact-section {
-  background-color: #f5f1ed;
+  background-color: var(--color-beige);
   padding-top: 5rem;
   padding-bottom: 5rem;
   display: flex;
@@ -20,7 +20,7 @@
 
 .contact-badge {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 }
@@ -123,7 +123,7 @@
 
 .contact-submit-btn {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   padding: 0.75rem 2rem;
   border: none;
   cursor: pointer;

@@ -94,7 +94,7 @@
 }
 
 .hero-h1 {
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -114,7 +114,7 @@
 }
 
 .hero-contact-info {
-  color: #ffffff;
+  color: var(--color-white);
   text-align: right;
   font-size: 0.875rem;
 }
@@ -140,11 +140,11 @@
 }
 
 .hero-contact-value {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .hero-link {
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
