@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { validateField, validateForm, contactFormValidation } from '../utils/validation'
-import '../styles/contact.css' 
 
 export function Contact() {
   const [formData, setFormData] = useState({
