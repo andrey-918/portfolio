@@ -168,40 +168,6 @@ func EducationHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(educations)
 }
 
-func SkillsHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-
-	// Check cache first
-	if cached, found := cache.Get("skills"); found {
-		w.Write([]byte(cached))
-		return
-	}
-
-	// Cache miss, query DB
-	rows, err := db.Pool.Query(r.Context(), `SELECT name, category, level FROM skills ORDER BY id`)
-	if err != nil {
-		http.Error(w, "DB error", http.StatusInternalServerError)
-		return
-	}
-	defer rows.Close()
-	var skills []models.Skill
-	for rows.Next() {
-		var s models.Skill
-		if err := rows.Scan(&s.Name, &s.Category, &s.Level); err != nil {
-			http.Error(w, "DB scan error", http.StatusInternalServerError)
-			return
-		}
-		skills = append(skills, s)
-	}
-
-	// Encode to JSON and cache
-	data, _ := json.Marshal(skills)
-	cache.Set("skills", string(data))
-
-	w.Write(data)
-}
-
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")

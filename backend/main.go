@@ -24,7 +24,6 @@ func main() {
 	mux.HandleFunc("/api/projects", handlers.ProjectsHandler)
 	mux.HandleFunc("/api/experience", handlers.ExperienceHandler)
 	mux.HandleFunc("/api/education", handlers.EducationHandler)
-	mux.HandleFunc("/api/skills", handlers.SkillsHandler)
 	mux.HandleFunc("/api/contact", handlers.ContactHandler)
 
 	log.Printf("Server started at :%s", port)

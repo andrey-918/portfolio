@@ -6,7 +6,7 @@ VALUES (
   'Разработчик',
   '2025 - н.в.',
   'Создание сайтов, поддержание их актуальности, обновление информации, исправление багов, добавление нового функционала.',
-  '{"PHP", "HTML", "JavaScript", "TypeScript", "HTML", "Vite"}',
+  '{"PHP", "HTML", "JavaScript", "TypeScript"}',
   '{"Создал сайт для поставок цемента из Ирана", "Разработал несколько новых разделов", "Создал систему парсинга товаров"}',
   'https://tk-cm.ru',
   'Москва',
@@ -37,7 +37,7 @@ INSERT INTO projects (title, description, technologies, image_url, github_url, l
 VALUES (
   'Портфолио сайт',
   'Многофункциональное портфолио с информацией о проектах, образовании и опыте работы',
-  '{"Go", "MySQL", "TypeScript", "React", "Vite"}',
+  '{"Go", "MySQL", "TypeScript", "React"}',
   'URL_картинки',
   'https://github.com/andrey-918/portfolio',
   'https://karganov-an.ru',
@@ -49,23 +49,10 @@ INSERT INTO projects (title, description, technologies, image_url, github_url, l
 VALUES (
   'Цемент из Ирана',
   'Одностраничный сайт с информацией о поставках цемента из Ирана через компанию ООО "СМ Групп"',
-  '{"TypeScript", "HTML", "Vite", "CSS"}',
+  '{"TypeScript", "HTML", "CSS"}',
   'URL_картинки',
   'https://github.com/andrey-918/cement',
   'https://cementiran.ru',
   'Frontend',
   '2025-10-18'
 );
-
-INSERT INTO skills (name, category, level)
-VALUES
-  ('Go', 'Backend', 80),
-  ('PostgreSQL', 'Database', 70),
-  ('MySQL', 'Database', 70),
-  ('React', 'Frontend', 65),
-  ('TypeScript', 'Frontend', 70),
-  ('JavaScript', 'Frontend', 75),
-  ('HTML', 'Frontend', 90),
-  ('CSS', 'Frontend', 80),
-  ('Docker', 'DevOps', 65),
-  ('Git', 'Tools', 80);
