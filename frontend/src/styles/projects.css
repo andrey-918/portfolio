@@ -59,14 +59,21 @@
 }
 
 .projects-h2 {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   line-height: 1;
   letter-spacing: -0.025em;
   line-height: 1;
   margin-bottom: 0;
 }
 
-@media (width >= 64rem) {
+@media (min-width: 768px) {
+  .projects-h2 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
   .projects-h2 {
     font-size: 4.5rem;
     line-height: 1;

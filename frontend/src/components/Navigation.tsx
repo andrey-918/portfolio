@@ -23,11 +23,12 @@ export function Navigation() {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'education', label: 'Education' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Главная' },
+    { id: 'about', label: 'Обо мне' },
+    { id: 'education', label: 'Учёба' },
+    { id: 'experience', label: 'Работа'},
+    { id: 'projects', label: 'Проекты' },
+    { id: 'contact', label: 'Контакты' }
   ];
 
   return (

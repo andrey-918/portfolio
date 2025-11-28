@@ -56,7 +56,7 @@
   padding-right: 1.5rem;
 }
 
-.hero-flex-container {
+.hero-flex-container {      
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,7 +95,7 @@
 
 .hero-h1 {
   color: #ffffff;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;

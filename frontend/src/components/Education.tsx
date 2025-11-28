@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import '../styles/education.css';
 
 interface EducationItem {
@@ -57,7 +56,7 @@ export function Education() {
           {/* Right - Photo */}
           <div className="education-photo-container">
             <div className="education-photo-wrapper">
-              <ImageWithFallback
+              <img
                 src="https://i.pinimg.com/1200x/2a/70/2e/2a702ed780e9b9d6d88a2574f428983b.jpg"
                 alt="Books and library"
                 className="education-photo"

@@ -52,8 +52,14 @@
 
 .about-photo-wrapper {
   position: relative;
-  height: 600px;
+  height: 400px;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-photo-wrapper {
+    height: 600px;
+  }
 }
 
 .about-photo {

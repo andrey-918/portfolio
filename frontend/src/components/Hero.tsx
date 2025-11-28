@@ -1,5 +1,5 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import '../styles/hero.css';
+import heroImage from '../images/workspace.jpg';
 
 export function Hero() {
   return (
@@ -7,8 +7,8 @@ export function Hero() {
       <div className="hero-background">
         <div className="hero-image-container">
           <div className="hero-image-wrapper">
-            <ImageWithFallback
-              src="https://i.pinimg.com/1200x/11/60/05/1160053e6410ecc7664ecd83350e8762.jpg"
+            <img
+              src={heroImage}
               alt="Workspace"
               className="hero-image"
             />
@@ -28,13 +28,13 @@ export function Hero() {
           </div>
           <div className="hero-contact-info">
             <div className="hero-date">
-              <p>May 24, 2025</p>
+              <p>Ноябрь 26, 2025</p>
             </div>
             <div className="hero-contact-list">
               <p className="hero-contact-item"><span className="hero-contact-label">Телефон:</span><span className="hero-contact-value"><a href="tel:+7 915 204-96-13" className="link"> +7 (915) 204-96-13</a></span></p>
               <p className="hero-contact-item"><span className="hero-contact-label">Сайт:</span><span className="hero-contact-value"><a href="karganov-an.ru" className="link"> karganov-an.ru</a></span></p>
               <p className="hero-contact-item"><span className="hero-contact-label">Почта:</span><span className="hero-contact-value"><a href="mailto:karganov.an@yandex.ru" className="link"> karganov.an@yandex.ru</a></span></p>
-              <p className="hero-contact-item"><span className="hero-contact-label">Локация:</span><span className="hero-contact-value"> Москва</span></p>
+              <p className="hero-contact-item"><span className="hero-contact-label">Город:</span><span className="hero-contact-value"> Москва</span></p>
             </div>
           </div>
         </div>

@@ -44,11 +44,17 @@
 }
 
 .education-h2 {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .education-h2 {
+    font-size: 3.75rem;
+  }
 }
 
 @media (min-width: 1024px) {

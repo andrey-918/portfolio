@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import '../styles/projects.css';
 
 interface Project {
@@ -41,7 +40,7 @@ export function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="project-card">
               <div className="project-image-wrapper">
-                <ImageWithFallback
+                <img
                   src={project.image_url}
                   alt={project.title}
                   className="project-image"

@@ -366,8 +366,22 @@ html {
 
 
 .global-container {
-  width: 85rem;
+  max-width: 85rem;
   margin: 0 auto;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .global-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .global-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }

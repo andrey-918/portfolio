@@ -1,5 +1,4 @@
 import '../styles/about.css';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function About() {
   return (
@@ -12,7 +11,7 @@ export function About() {
               <span className="about-badge-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
             </div>
             <div className="about-photo-wrapper">
-              <ImageWithFallback
+              <img
                 src="https://i.pinimg.com/1200x/13/eb/49/13eb49d5c45edc7f819c5c0cd76ecb39.jpg"
                 alt="Portrait"
                 className="about-photo"

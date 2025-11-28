@@ -33,16 +33,22 @@
 }
 
 .contact-title {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
   margin-bottom: 4rem;
 }
 
+@media (min-width: 768px) {
+  .contact-title {
+    font-size: 3.75rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .contact-title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
@@ -143,6 +149,8 @@
 .contact-footer p {
   font-size: 0.875rem;
   color: #6b7280;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-success {
