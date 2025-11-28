@@ -36,7 +36,7 @@ export function Education() {
             </h2>
 
             <p className="education-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Учёба — это не только лекции и экзамены, а настоящий путь к самосовершенствованию. Я прошел через университет и IT-курсы, где научился не бояться ошибок, думать творчески и превращать идеи в реальность. Это заложило фундамент для моей карьеры в IT, где каждый день — это шанс узнать что-то новое и создать что-то крутое.
             </p>
 
             {/* Education List */}
