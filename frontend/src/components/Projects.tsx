@@ -51,7 +51,7 @@ export function Projects() {
                 <div className="project-header">
                   <p className="project-category">{project.category}</p>
                   <h3 className="project-title">
-                    {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">{project.title}</a> : project.title}
+                    {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="link">{project.title}</a> : project.title}
                   </h3>
                 </div>
                 <div className="project-content">
@@ -64,7 +64,7 @@ export function Projects() {
                 </div>
                 <div className="project-links">
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link link">
                       GitHub
                     </a>
                   )}
