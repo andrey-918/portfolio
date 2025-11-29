@@ -81,7 +81,6 @@ portfolio/
 | GET | `/api/projects` | Получить список проектов |
 | GET | `/api/experience` | Получить опыт работы |
 | GET | `/api/education` | Получить образование |
-| GET | `/api/skills` | Получить навыки |
 | POST | `/api/contact` | Отправить сообщение |
 
 ## 📞 Контакты

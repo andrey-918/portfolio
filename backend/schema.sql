@@ -36,14 +36,6 @@ CREATE TABLE IF NOT EXISTS education (
     location TEXT NOT NULL
 );
 
--- Таблица навыков
-CREATE TABLE IF NOT EXISTS skills (
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    category TEXT NOT NULL,
-    level INT NOT NULL
-);
-
 -- Таблица сообщений с формы контактов (опционально)
 CREATE TABLE IF NOT EXISTS contact_messages (
     id SERIAL PRIMARY KEY,

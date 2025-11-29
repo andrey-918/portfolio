@@ -1,3 +1,0 @@
-- Update Project interface in Projects.tsx to use githubUrl instead of github_url
-- Update Projects.tsx render to display description, technologies as tags, and GitHub link
-- Update projects.css to style new elements: description, tech tags, GitHub link icon, responsive design
