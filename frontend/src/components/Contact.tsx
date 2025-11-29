@@ -199,7 +199,7 @@ export function Contact() {
                 disabled={isSubmitting}
                 className="contact-submit-btn"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Отправка...' : 'Отправить сообщение'}
               </button>
 
               {submitStatus === 'success' && (
@@ -220,7 +220,7 @@ export function Contact() {
         {/* Footer */}
         <div className="contact-footer">
           <p>
-            © 2025 Andrey Karganov. All rights reserved.
+            © 2025 Андрей Карганов. Все права защищены.
           </p>
         </div>
       </div>
