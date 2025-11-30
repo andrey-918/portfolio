@@ -16,6 +16,9 @@ export function About() {
                 alt="Portrait"
                 className="about-photo"
               />
+              <div className="image-bottom-badge">
+                <span className="image-bottom-badge-text">May 24, 2025</span>
+              </div>
               <div className="about-accent-dot" />
             </div>
           </div>
@@ -31,10 +34,6 @@ export function About() {
               Full-stack разработчик с фокусом на создании интуитивных и эффективных digital-решений. 
               Превращаю бизнес-задачи в чистый код и понятные интерфейсы.
             </p>
-
-            <div className="about-highlight-badge">
-              <span className="about-highlight-text">May 24, 2025</span>
-            </div>
           </div>
         </div>
       </div>

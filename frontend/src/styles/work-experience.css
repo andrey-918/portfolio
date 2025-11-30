@@ -18,13 +18,13 @@
 
 .work-experience-badge {
   display: inline-block;
-  background-color: #000000;
+  background-color: var(--color-white);
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 }
 
 .work-experience-badge-text {
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }

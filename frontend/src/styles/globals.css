@@ -386,3 +386,17 @@ html {
     padding-right: 5rem;
   }
 }
+
+
+.image-bottom-badge {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-black);
+  padding: 0.5rem 1rem;
+}
+
+.image-bottom-badge-text {
+  color: var(--color-white);
+  font-size: 0.75rem;
+}

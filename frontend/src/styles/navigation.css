@@ -75,7 +75,7 @@
 }
 
 .nav-logo-scrolled {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .nav-logo-transparent {
@@ -106,7 +106,7 @@
 }
 
 .nav-link-scrolled {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .nav-link-transparent {
@@ -126,7 +126,7 @@
 }
 
 .nav-mobile-btn-scrolled {
-  color: #000000;
+  color: var(--color-black);
 }
 
 .nav-mobile-btn-transparent {

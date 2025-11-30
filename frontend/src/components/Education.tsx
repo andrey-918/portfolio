@@ -62,8 +62,8 @@ export function Education() {
                 className="education-photo"
               />
             </div>
-            <div className="education-bottom-badge">
-              <span className="education-bottom-badge-text">May 24, 2025</span>
+            <div className="image-bottom-badge">
+              <span className="image-bottom-badge-text">May 24, 2025</span>
             </div>
           </div>
         </div>

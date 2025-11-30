@@ -27,13 +27,13 @@
 
 .education-badge {
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 }
 
 .education-badge-text {
-  color: #000000;
+  color: var(--color-white);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }
@@ -102,17 +102,4 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.education-bottom-badge {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: #000000;
-  padding: 0.5rem 1rem;
-}
-
-.education-bottom-badge-text {
-  color: var(--color-white);
-  font-size: 0.75rem;
 }

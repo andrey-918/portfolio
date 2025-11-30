@@ -43,12 +43,6 @@
   margin-bottom: 2rem;
 }
 
-.about-badge-text {
-  color: #000000;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
-
 .about-photo-wrapper {
   position: relative;
   height: 400px;
@@ -95,16 +89,4 @@
   color: #374151;
   margin-bottom: 1.5rem;
   max-width: 28rem;
-}
-
-.about-highlight-badge {
-  display: inline-block;
-  background-color: #000000;
-  padding: 0.5rem 1rem;
-  margin-top: 2rem;
-}
-
-.about-highlight-text {
-  color: var(--color-white);
-  font-size: 0.75rem;
 }
