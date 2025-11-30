@@ -1,4 +1,5 @@
 import '../styles/about.css';
+import about1 from '../images/about-1.jpg'
 
 export function About() {
   return (
@@ -12,7 +13,7 @@ export function About() {
             </div>
             <div className="about-photo-wrapper">
               <img
-                src="https://i.pinimg.com/1200x/13/eb/49/13eb49d5c45edc7f819c5c0cd76ecb39.jpg"
+                src={about1}
                 alt="Portrait"
                 className="about-photo"
               />

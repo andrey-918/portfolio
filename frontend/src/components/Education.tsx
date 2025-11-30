@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/education.css';
+import educationPhoto1 from '../images/about-2.jpg'
 
 interface EducationItem {
   id: number;
@@ -57,7 +58,7 @@ export function Education() {
           <div className="education-photo-container">
             <div className="education-photo-wrapper">
               <img
-                src="https://i.pinimg.com/1200x/2a/70/2e/2a702ed780e9b9d6d88a2574f428983b.jpg"
+                src={educationPhoto1}
                 alt="Books and library"
                 className="education-photo"
               />
