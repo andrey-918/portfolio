@@ -36,7 +36,7 @@ VALUES (
   'Портфолио сайт',
   'Многофункциональное портфолио с информацией о проектах, образовании и опыте работы',
   '{"Go", "MySQL", "TypeScript", "React"}',
-  '/portfolio.png',
+  '/workspace.png',
   'https://github.com/andrey-918/portfolio',
   'https://karganov-an.ru',
   'Full-stack',
