@@ -8,9 +8,9 @@
   --color-gray-500: oklch(.551 .027 264.364);
   --color-gray-700: oklch(.373 .034 259.733);
   --color-gray-800: oklch(.278 .033 256.848);
-  --color-black: #000;
-  --color-beige: #f5f1ed;
-  --color-white: #ffffff;
+  --color-text: #000;
+  --background-1: #f5f1ed;
+  --color-text-inv: #ffffff;
   --spacing: .25rem;
   --container-md: 28rem;
   --container-lg: 32rem;
@@ -48,9 +48,50 @@
   --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
   --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
   --background: #fff;
+  --background-2: #fff;
   --foreground: oklch(.145 0 0);
   --border: rgba(0, 0, 0, 0.1);
   --ring: oklch(.708 0 0);
+  --color-gray-900: oklch(.129 0 0);
+  --color-gray-600: oklch(.446 0 0);
+  --color-gray-400: oklch(.707 0 0);
+  --color-brown: #d4a574;
+  --color-green-light: #dcfce7;
+  --color-green-dark: #166534;
+  --color-red-light: #fef2f2;
+  --color-red-dark: #991b1b;
+  --color-red: #dc2626;
+  --color-hero: white;
+  --color-nav-scroll-text: #000;
+  --color-nav-scroll: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: oklch(.967 .003 264.542);
+    --border: rgba(255, 255, 255, 0.1);
+    --ring: oklch(.708 0 0);
+    --color-gray-100: oklch(.129 0 0);
+    --color-gray-300: oklch(.446 0 0);
+    --color-gray-500: oklch(.707 0 0);
+    --color-gray-700: oklch(.708 0 0);
+    --color-gray-800: oklch(.967 .003 264.542);
+    --color-gray-900: oklch(.967 .003 264.542);
+    --color-gray-600: oklch(.707 0 0);
+    --color-gray-400: oklch(.551 .027 264.364);
+    --color-text: #fff;
+    --color-text-inv: #000;
+    --background-1: #1a1a1a;
+    --background-2: #000;
+    --color-brown: #a3744d;
+    --color-green-light: #0f5132;
+    --color-green-dark: #dcfce7;
+    --color-red-light: #450a0a;
+    --color-red-dark: #fef2f2;
+    --color-red: #fca5a5;
+    --color-nav-scroll: rgb(136, 136, 136);
+  }
 }
 
 *, :after, :before, ::backdrop {
@@ -392,11 +433,11 @@ html {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  background-color: var(--color-black);
+  background-color: var(--color-text);
   padding: 0.5rem 1rem;
 }
 
 .image-bottom-badge-text {
-  color: var(--color-white);
+  color: var(--color-text-inv);
   font-size: 0.75rem;
 }

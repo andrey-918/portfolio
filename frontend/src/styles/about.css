@@ -1,6 +1,6 @@
 /* About Section Styles */
 .about-section {
-  background-color: var(--color-beige);
+  background-color: var(--background-1);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -38,7 +38,7 @@
 
 .about-badge {
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: var(--background-2);
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 }
@@ -86,7 +86,7 @@
 }
 
 .about-description {
-  color: #374151;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
   max-width: 28rem;
 }

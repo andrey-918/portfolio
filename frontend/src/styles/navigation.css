@@ -20,7 +20,7 @@
 }
 
 .nav-scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-nav-scroll);
   backdrop-filter: blur(4px);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
@@ -85,11 +85,11 @@
 }
 
 .nav-logo-scrolled {
-  color: var(--color-black);
+  color: var(--color-nav-scroll-text);
 }
 
 .nav-logo-transparent {
-  color: var(--color-white);
+  color: var(--color-hero);
 }
 
 .nav-menu {
@@ -116,11 +116,11 @@
 }
 
 .nav-link-scrolled {
-  color: var(--color-black);
+  color: var(--color-nav-scroll-text);
 }
 
 .nav-link-transparent {
-  color: var(--color-white);
+  color: var(--color-hero);
 }
 
 .nav-mobile-btn {
@@ -136,18 +136,18 @@
 }
 
 .nav-mobile-btn-scrolled {
-  color: var(--color-black);
+  color: var(--color-nav-scroll-text);
 }
 
 .nav-mobile-btn-transparent {
-  color: var(--color-white);
+  color: var(--color-hero);
 }
 
 .nav-mobile-menu {
   position: fixed;
   inset: 0;
   z-index: 40;
-  background-color: var(--color-white);
+  background-color: var(--color-hero);
   display: none;
   flex-direction: column;
   align-items: center;

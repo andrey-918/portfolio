@@ -1,6 +1,6 @@
 /* Work Experience Section Styles */
 .work-experience-section {
-  background-color: var(--color-beige);
+  background-color: var(--background-1);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -18,13 +18,13 @@
 
 .work-experience-badge {
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: var(--background-2);
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 }
 
 .work-experience-badge-text {
-  color: var(--color-black);
+  color: var(--color-text);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }
@@ -103,7 +103,7 @@
 
 .experience-company {
   font-size: 1.5rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin-bottom: 0.25rem;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .experience-description {
-  color: #374151;
+  color: var(--color-gray-700);
   margin-bottom: 1rem;
 }
 
