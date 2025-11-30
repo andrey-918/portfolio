@@ -131,7 +131,7 @@
 }
 
 .contact-submit-btn:hover:not(:disabled) {
-  background-color: #374151;
+  background-color: var(--color-text);
 }
 
 .contact-submit-btn:disabled {
