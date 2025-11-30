@@ -98,7 +98,7 @@
 }
 
 .hero-badge-text {
-  color: var(--color-text);
+  color: var(--color-hero);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }
