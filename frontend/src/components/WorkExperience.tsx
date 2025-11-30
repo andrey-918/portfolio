@@ -57,7 +57,7 @@ export function WorkExperience() {
                   <h4 className="experience-tech-title">Технологии</h4>
                   <div className="experience-tech-list">
                     {item.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="experience-tech-item">
+                      <span key={techIndex} className="tech-tag">
                         {tech}
                       </span>
                     ))}
