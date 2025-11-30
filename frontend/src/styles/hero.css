@@ -8,7 +8,6 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInHero 2s ease-out 0.1s forwards;
-  will-change: transform, opacity; /* Подсказка браузеру для аппаратного ускорения */
 }
 
 @keyframes fadeInHero {
