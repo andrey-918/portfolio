@@ -7,6 +7,16 @@
   z-index: 50;
   transition: all 0.3s ease;
   background-color: transparent;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInNav 1s ease-out 1s forwards;
+}
+
+@keyframes fadeInNav {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-scrolled {

@@ -11,6 +11,7 @@ export function Hero() {
               src={heroImage}
               alt="Workspace"
               className="hero-image"
+              loading="eager"
             />
             <div className="image-bottom-badge">
                 <span className="image-bottom-badge-text">Nov 15, 2025</span>
