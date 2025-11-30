@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  image_url: string;
+  imageUrl: string;
   githubUrl?: string;
   liveUrl?: string;
   category: string;
@@ -41,7 +41,7 @@ export function Projects() {
             <div key={index} className="project-card">
               <div className="project-image-wrapper">
                 <img
-                  src={project.image_url}
+                  src={project.imageUrl}
                   alt={project.title}
                   className="project-image"
                 />

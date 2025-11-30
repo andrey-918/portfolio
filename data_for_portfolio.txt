@@ -1,5 +1,3 @@
--- MySQL INSERT statements for portfolio data
-
 INSERT INTO work_experience (company, position, period, description, technologies, achievements, company_url, location, current)
 VALUES (
   'ООО "СМ ГРУПП"',
@@ -38,7 +36,7 @@ VALUES (
   'Портфолио сайт',
   'Многофункциональное портфолио с информацией о проектах, образовании и опыте работы',
   '{"Go", "MySQL", "TypeScript", "React"}',
-  'URL_картинки',
+  'https://disk.yandex.ru/i/8lsJyeh4aImM7Q',
   'https://github.com/andrey-918/portfolio',
   'https://karganov-an.ru',
   'Full-stack',
@@ -50,9 +48,22 @@ VALUES (
   'Цемент из Ирана',
   'Одностраничный сайт с информацией о поставках цемента из Ирана через компанию ООО "СМ Групп"',
   '{"TypeScript", "HTML", "CSS"}',
-  'URL_картинки',
+  'https://disk.yandex.ru/i/JdOH6nxaeAZdsg',
   'https://github.com/andrey-918/cement',
   'https://cementiran.ru',
   'Frontend',
   '2025-10-18'
 );
+
+INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
+VALUES (
+  'Кофейня',
+  'Элегантное веб-решение для современной кофейни: минималистичный интерфейс для клиентов и мощная система управления контентом для владельца. Возможность онлайн-обновления меню и публикации акций.',
+  '{"Go", "TypeScript", "React", "CSS", "Docker", "Postgres", "VPS"}',
+  'https://disk.yandex.ru/i/_gjhuzuAC418zw',
+  'https://github.com/andrey-918/cafe-between',
+  'https://karganov-an.online',
+  'Full-stack',
+  '2025-11-20'
+);
+
