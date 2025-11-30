@@ -64,7 +64,7 @@ export function Education() {
               />
             </div>
             <div className="image-bottom-badge">
-              <span className="image-bottom-badge-text">May 24, 2025</span>
+              <span className="image-bottom-badge-text">Sep 13, 2025</span>
             </div>
           </div>
         </div>
