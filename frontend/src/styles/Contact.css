@@ -70,7 +70,7 @@
 }
 
 .contact-info-item h3 {
-  color: #6b7280;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -147,7 +147,7 @@
 
 .contact-footer p {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--color-text);
   display: flex;
   justify-content: center;
 }

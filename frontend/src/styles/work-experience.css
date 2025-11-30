@@ -71,7 +71,7 @@
 }
 
 .experience-period-text {
-  color: #6b7280;
+  color: var(--color-text);
   font-size: 0.875rem;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .experience-location {
-  color: #6b7280;
+  color: var(--color-text);
   font-size: 0.875rem;
   margin-bottom: 1rem;
 }
