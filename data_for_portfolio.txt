@@ -60,7 +60,7 @@ VALUES (
   'Кофейня',
   'Элегантное веб-решение для современной кофейни: минималистичный интерфейс для клиентов и мощная система управления контентом для владельца. Возможность онлайн-обновления меню и публикации акций.',
   '{"Go", "TypeScript", "React", "CSS", "Docker", "Postgres", "VPS"}',
-  '/cafe.png',
+  '/cafe.jpg',
   'https://github.com/andrey-918/cafe-between',
   'https://karganov-an.online',
   'Full-stack',
