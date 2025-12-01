@@ -135,6 +135,12 @@
   height: 100%; /* Занимает всю высоту карточки */
 }
 
+@media (max-width: 550px)  {
+  .project-info {
+    height: auto;
+  }
+}
+
 .project-content {
   flex: 1;
   display: flex;
