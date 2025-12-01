@@ -8,8 +8,8 @@ export function About() {
         <div className="about-grid">
           {/* Left - Photo */}
           <div className="≈">
-            <div className="about-badge">
-              <span className="about-badge-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
+            <div className="section-badge-1">
+              <span className="section-badge-1-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
             </div>
             <div className="photo-wrapper">
               <img

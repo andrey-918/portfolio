@@ -614,3 +614,29 @@ img:hover {
     font-size: 4.5rem;
   }
 }
+
+.section-badge-1 {
+  display: inline-block;
+  background-color: var(--background-2);
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-badge-1-text {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.section-badge-2 {
+  display: inline-block;
+  background-color: var(--color-text);
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-badge-2-text {
+  color: var(--color-text-inv);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}

@@ -32,12 +32,6 @@
   }
 }
 
-.about-badge {
-  display: inline-block;
-  background-color: var(--background-2);
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
-}
 
 
 .about-accent-dot {

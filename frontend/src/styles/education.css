@@ -25,20 +25,6 @@
   }
 }
 
-.education-badge {
-  display: inline-block;
-  background-color: var(--color-text);
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
-}
-
-.education-badge-text {
-  color: var(--color-text-inv);
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
-
-
 
 .education-description {
   color: var(--color-text);

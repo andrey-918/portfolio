@@ -27,8 +27,8 @@ export function Projects() {
     <section id="projects" className="projects-section">
       <div className="global-container">
         <div className="projects-header">
-          <div className="projects-badge">
-            <span className="projects-badge-text">Теория — это основа, а практика — результат.</span>
+          <div className="section-badge-2">
+            <span className="section-badge-2-text">Теория — это основа, а практика — результат.</span>
           </div>
           <h2 className="section-title">
             ПРОЕКТЫ

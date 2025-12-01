@@ -27,8 +27,8 @@ export function WorkExperience() {
     <section id="experience" className="work-experience-section">
       <div className="global-container">
         <div className="work-experience-header">
-          <div className="work-experience-badge">
-            <span className="work-experience-badge-text">«Опыт — это не то, что происходит с человеком, а то, что человек делает с тем, что с ним происходит». — Олдос Хаксли</span>
+          <div className="section-badge-1">
+            <span className="section-badge-1-text">«Опыт — это не то, что происходит с человеком, а то, что человек делает с тем, что с ним происходит». — Олдос Хаксли</span>
           </div>
           <h2 className="section-title">
             ОПЫТ<br />

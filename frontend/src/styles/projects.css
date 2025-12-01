@@ -54,23 +54,7 @@
   }
 }
 
-.projects-badge {
-  background-color: #000;
-  display: inline-block;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-}
 
-
-.projects-badge-text {
-  color: var(--color-text-inv);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.05em;
-}
 
 
 

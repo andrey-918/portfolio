@@ -28,8 +28,8 @@ export function Education() {
         <div className="education-grid">
           {/* Left - Content */}
           <div className="education-content">
-            <div className="education-badge">
-              <span className="education-badge-text">«Я знаю, что ничего не знаю». — Сократ</span>
+            <div className="section-badge-2">
+              <span className="section-badge-2-text">«Я знаю, что ничего не знаю». — Сократ</span>
             </div>
 
             <h2 className="section-title">

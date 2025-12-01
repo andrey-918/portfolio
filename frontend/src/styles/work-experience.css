@@ -16,18 +16,7 @@
   margin-bottom: 4rem;
 }
 
-.work-experience-badge {
-  display: inline-block;
-  background-color: var(--background-2);
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
-}
 
-.work-experience-badge-text {
-  color: var(--color-text);
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
 
 .work-experience-timeline {
   display: flex;
