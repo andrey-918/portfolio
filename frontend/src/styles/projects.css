@@ -91,12 +91,14 @@
   overflow: hidden;
 }
 
-.project-image-wrapper:hover .project-overlay {
+.project-card:hover .project-overlay {
   opacity: 0.2;
+  z-index: 2; /* убедитесь, что overlay остается поверх */
 }
 
-.project-image-wrapper:hover .project-image {
+.project-card:hover .project-image {
   transform: scale(1.05);
+  z-index: 1;
 }
 
 .project-image-wrapper {
@@ -110,6 +112,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .project-overlay {
@@ -118,6 +121,8 @@
   opacity: 0.4;
   background-color: #4a46467a;
   transition: opacity 0.3s ease;
+  z-index: 2; /* ← добавьте */
+  pointer-events: none;
 }
 
 .project-card {
