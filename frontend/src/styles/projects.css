@@ -91,11 +91,11 @@
   overflow: hidden;
 }
 
-.project-card:hover .project-overlay {
+.project-image-wrapper:hover .project-overlay {
   opacity: 0.2;
 }
 
-.project-card:hover .project-image {
+.project-image-wrapper:hover .project-image {
   transform: scale(1.05);
 }
 
