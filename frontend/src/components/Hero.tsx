@@ -22,9 +22,7 @@ export function Hero() {
       <div className="hero-content">
         <div className="hero-flex-container">
           <div className="hero-main-title">
-            <div className="hero-badge">
-              <span className="hero-badge-text">Karganov Andrey</span>
-            </div>
+
             <h1 className="hero-h1">
               PORT<br />FOLIO
             </h1>

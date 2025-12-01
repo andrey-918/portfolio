@@ -88,18 +88,7 @@
   }
 }
 
-.hero-badge {
-  display: inline-block;
-  background-color: rgba(var(--color-hero), 0.9);
-  padding: 0.5rem 1rem;
-  margin-bottom: 1.5rem;
-}
 
-.hero-badge-text {
-  color: var(--color-hero);
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
 
 .hero-h1 {
   color: var(--color-hero);
