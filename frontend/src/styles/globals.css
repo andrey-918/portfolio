@@ -463,3 +463,11 @@ html {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 380px) {
+  body {
+    overflow-x: hidden;
+  }
+  html {
+    overflow-x: hidden;
+  }
+}
