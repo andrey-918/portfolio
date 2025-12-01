@@ -42,10 +42,19 @@ export function Education() {
 
             {/* Education List */}
             <div className="education-list">
-              {educationItems.map((item, index) => (
-                <div key={index} className="education-item">
-                  <h3>{item.institution}</h3>
-                  <p className="education-item-period">{item.period}</p>
+              {educationItems.map((item) => (
+                <div key={item.id} className="education-item">
+                  <div className="education-item-header">
+                    <h3>{item.institution}</h3>
+                    <div className="education-item-location-period">
+                      <span className="education-item-location">{item.location}</span>
+                      <span className="education-item-period">{item.period}</span>
+                    </div>
+                  </div>
+                  <div className="education-item-meta">
+                    <span className="education-item-degree">{item.degree}</span>
+                    <span className="education-item-field">{item.field}</span>
+                  </div>
                   <p className="education-item-description">
                     {item.description}
                   </p>
@@ -66,6 +75,13 @@ export function Education() {
             <div className="image-bottom-badge">
               <span className="image-bottom-badge-text">Oct 15, 2025</span>
             </div>
+          </div>
+          {/* Education Quote */}
+            <div className="education-quote">
+              <blockquote>
+                "Образование — не подготовка к жизни, это сама жизнь."
+              </blockquote>
+              <cite>— Джон Дьюи</cite>
           </div>
         </div>
       </div>
