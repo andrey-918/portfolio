@@ -116,6 +116,7 @@
   position: absolute;
   inset: 0;
   opacity: 0.4;
+  background: #4a46467a;
   transition: opacity 0.3s ease;
 }
 
