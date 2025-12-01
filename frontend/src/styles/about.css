@@ -69,3 +69,16 @@
   margin-bottom: 1.5rem;
   max-width: 28rem;
 }
+
+@media (max-width: 380px) {
+  .about-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+  .about-description {
+    max-width: none;
+  }
+}

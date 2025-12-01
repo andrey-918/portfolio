@@ -171,3 +171,20 @@
 .nav-mobile-link:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 380px) {
+  .nav-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .nav-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .nav-logo {
+    font-size: 1rem;
+  }
+  .nav-mobile-link {
+    font-size: 1.5rem;
+  }
+}

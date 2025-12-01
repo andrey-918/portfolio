@@ -87,3 +87,22 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+
+@media (max-width: 380px) {
+  .education-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .education-h2 {
+    font-size: 2.5rem;
+  }
+  .education-description {
+    max-width: none;
+  }
+  .education-item h3 {
+    font-size: 1.25rem;
+  }
+  .education-item-description {
+    font-size: 0.875rem;
+  }
+}
