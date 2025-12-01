@@ -89,16 +89,21 @@
 .project-card {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Фиксированная высота для всех карточек */
+  border: 0.1px solid var(--color-gray-300);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* Упростите hover - уберите z-index отсюда */
 .project-card:hover .project-overlay {
   opacity: 0.2;
-  z-index: 2; /* убедитесь, что overlay остается поверх */
 }
 
 .project-card:hover .project-image {
   transform: scale(1.05);
-  z-index: 1;
 }
 
 .project-image-wrapper {
@@ -112,7 +117,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  z-index: 1;
+  /* z-index не нужен здесь, т.к. элемент не позиционирован */
 }
 
 .project-overlay {
@@ -121,17 +126,8 @@
   opacity: 0.4;
   background-color: #4a46467a;
   transition: opacity 0.3s ease;
-  z-index: 2; /* ← добавьте */
-  pointer-events: none;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  height: 600px; /* Фиксированная высота для всех карточек */
-  border: 0.1px solid var(--color-gray-300);
-  border-radius: 12px;
-  overflow: hidden;
+  pointer-events: none; /* Это самое важное! */
+  /* z-index тоже не нужен, overlay и так поверх из-за position: absolute */
 }
 
 .project-info {
@@ -154,7 +150,6 @@
   min-height: 0;
 }
 
-
 .project-category {
   color: var(--color-text);
   font-size: 0.875rem;
@@ -175,13 +170,6 @@
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-.project-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
 }
 
 .project-description {
