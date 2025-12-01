@@ -87,7 +87,7 @@ export function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`nav-mobile-btn ${isScrolled ? 'nav-mobile-btn-scrolled' : 'nav-mobile-btn-transparent'}`}
+              className={`nav-mobile-btn ${isScrolled ? 'nav-mobile-btn-scrolled' : 'nav-mobile-btn-transparent'} ${isMobileMenuOpen ? 'open' : ''}`}
             >
               {isMobileMenuOpen ? (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -189,3 +189,32 @@
     font-size: 1.5rem;
   }
 }
+
+
+/* Add this at the end of the file */
+.nav-mobile-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 45;
+}
+
+.nav-mobile-close svg {
+  stroke: var(--color-nav-scroll-text) !important;
+}
+
+@media (max-width: 380px) {
+  .nav-mobile-close {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Add this at the end of the file */
+.nav-mobile-btn.open {
+  color: var(--color-nav-scroll-text) !important;
+}
+
+.nav-mobile-btn.open svg {
+  stroke: var(--color-nav-scroll-text) !important;
+}
