@@ -117,7 +117,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  /* z-index не нужен здесь, т.к. элемент не позиционирован */
+  opacity: 0.6;
+  background-color: #000;
 }
 
 .project-overlay {
@@ -127,7 +128,6 @@
   background-color: #4a46467a;
   transition: opacity 0.3s ease;
   pointer-events: none; /* Это самое важное! */
-  /* z-index тоже не нужен, overlay и так поверх из-за position: absolute */
 }
 
 .project-info {
