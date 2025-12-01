@@ -98,7 +98,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 650px;
   background: var(--background);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
