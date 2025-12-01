@@ -152,6 +152,10 @@
   color: var(--color-gray-700);
 }
 
+.education-item-degree {
+  width: min-content;
+}
+
 /* Добавлен отдельный стиль для field если нужно */
 .education-item-field {
   background-color: var(--color-secondary-light);
