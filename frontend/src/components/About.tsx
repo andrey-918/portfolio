@@ -7,15 +7,15 @@ export function About() {
       <div className="global-container">
         <div className="about-grid">
           {/* Left - Photo */}
-          <div className="about-photo-container">
+          <div className="≈">
             <div className="about-badge">
               <span className="about-badge-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
             </div>
-            <div className="about-photo-wrapper">
+            <div className="photo-wrapper">
               <img
                 src={about1}
                 alt="Portrait"
-                className="about-photo"
+                className="photo"
               />
               <div className="image-bottom-badge">
                 <span className="image-bottom-badge-text">May 24, 2025</span>

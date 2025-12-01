@@ -441,3 +441,25 @@ html {
   color: var(--color-text-inv);
   font-size: 0.75rem;
 }
+
+.photo-container {
+  position: relative;
+}
+
+.photo-wrapper {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .photo-wrapper {
+    height: 600px;
+  }
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

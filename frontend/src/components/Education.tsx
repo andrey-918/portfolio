@@ -55,12 +55,12 @@ export function Education() {
           </div>
 
           {/* Right - Photo */}
-          <div className="education-photo-container">
-            <div className="education-photo-wrapper">
+          <div className="photo-container">
+            <div className="photo-wrapper">
               <img
                 src={educationPhoto1}
                 alt="Books and library"
-                className="education-photo"
+                className="photo"
               />
             </div>
             <div className="image-bottom-badge">
