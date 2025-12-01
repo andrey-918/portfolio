@@ -1,13 +1,30 @@
 import { useState, useEffect } from 'react';
+import Lenis from 'lenis';
 import '../styles/navigation.css';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    // Get the Lenis instance from the global window object or create one
+    const lenisInstance = (window as any).lenis as Lenis;
+    if (lenisInstance) {
+      setLenis(lenisInstance);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Calculate scroll progress
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      setScrollProgress(Math.min(scrollPercent, 100));
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -16,10 +33,18 @@ export function Navigation() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
+    if (element && lenis) {
+      // Use Lenis for ultra-smooth scrolling
+      lenis.scrollTo(element, {
+        offset: -80, // Account for fixed navigation height
+        duration: 1.5,
+        easing: (t: number) => 1 - Math.pow(1 - t, 3), // Custom easing for smoother feel
+      });
+    } else if (element) {
+      // Fallback to native smooth scrolling
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
     }
+    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -79,6 +104,9 @@ export function Navigation() {
             </button>
           </div>
         </div>
+
+        {/* Scroll Progress Indicator */}
+        <div className="nav-progress" style={{ width: `${scrollProgress}%` }}></div>
       </nav>
 
       {/* Mobile Menu */}

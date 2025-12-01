@@ -29,19 +29,6 @@
   letter-spacing: 0.05em;
 }
 
-.work-experience-title {
-  font-size: 3.75rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1;
-}
-
-@media (min-width: 1024px) {
-  .work-experience-title {
-    font-size: 4.5rem;
-  }
-}
-
 .work-experience-timeline {
   display: flex;
   flex-direction: column;

@@ -30,7 +30,7 @@ export function WorkExperience() {
           <div className="work-experience-badge">
             <span className="work-experience-badge-text">«Опыт — это не то, что происходит с человеком, а то, что человек делает с тем, что с ним происходит». — Олдос Хаксли</span>
           </div>
-          <h2 className="work-experience-title">
+          <h2 className="section-title">
             ОПЫТ<br />
             РАЗРАБОТКИ
           </h2>

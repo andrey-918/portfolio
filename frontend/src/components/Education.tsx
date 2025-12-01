@@ -32,7 +32,7 @@ export function Education() {
               <span className="education-badge-text">«Я знаю, что ничего не знаю». — Сократ</span>
             </div>
 
-            <h2 className="education-h2">
+            <h2 className="section-title">
               УЧЁБА
             </h2>
 

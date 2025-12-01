@@ -30,7 +30,7 @@ export function Projects() {
           <div className="projects-badge">
             <span className="projects-badge-text">Теория — это основа, а практика — результат.</span>
           </div>
-          <h2 className="projects-h2">
+          <h2 className="section-title">
             ПРОЕКТЫ
           </h2>
         </div>
@@ -66,6 +66,11 @@ export function Projects() {
                   {project.githubUrl && (
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link link">
                       GitHub
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="github-link link">
+                      Live
                     </a>
                   )}
                 </div>
