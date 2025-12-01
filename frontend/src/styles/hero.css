@@ -48,6 +48,12 @@
   object-position: center; /* центрирует изображение при обрезке */
 }
 
+@media (max-width: 430px) {
+  .hero-image {
+    object-position: -725px;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
