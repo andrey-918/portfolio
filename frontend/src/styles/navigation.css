@@ -162,6 +162,7 @@
 
 .nav-mobile-link {
   font-size: 2rem;
+  color: var(--color-nav-scroll-text);
   letter-spacing: 0.025em;
   cursor: pointer;
   opacity: 1;
