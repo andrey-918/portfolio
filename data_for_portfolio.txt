@@ -33,6 +33,18 @@ VALUES (
 
 INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
 VALUES (
+  'Cinema queue',
+  'Система конкурентного бронирования мест в кинотеатре',
+  '{"Go", "Redis", "Docker"}',
+  '/portfolio.jpg',
+  'https://github.com/andrey-918/cinema-queue',
+  'https://cinema-queue.ru',
+  'Backend',
+  '2026-08-01'
+);
+
+INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
+VALUES (
   'Портфолио сайт',
   'Многофункциональное портфолио с информацией о проектах, образовании и опыте работы',
   '{"Go", "MySQL", "TypeScript", "React"}',
@@ -47,11 +59,11 @@ INSERT INTO projects (title, description, technologies, image_url, github_url, l
 VALUES (
   'Цемент из Ирана',
   'Одностраничный сайт с информацией о поставках цемента из Ирана через компанию ООО "СМ Групп"',
-  '{"TypeScript", "HTML", "CSS"}',
+  '{"Go", "TypeScript", "HTML", "CSS"}',
   '/cement.png',
   'https://github.com/andrey-918/cement',
   'https://cementiran.ru',
-  'Frontend',
+  'Full-stack',
   '2025-10-18'
 );
 
@@ -62,7 +74,7 @@ VALUES (
   '{"Go", "TypeScript", "React", "CSS", "Docker", "Postgres", "VPS"}',
   '/cafe.jpg',
   'https://github.com/andrey-918/cafe-between',
-  'https://karganov-an.online',
+  'https://cafe-between.ru',
   'Full-stack',
   '2025-11-20'
 );
