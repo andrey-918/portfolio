@@ -2,13 +2,13 @@ INSERT INTO work_experience (company, position, period, description, technologie
 VALUES (
   'ООО "СМ ГРУПП"',
   'Разработчик',
-  '2025 - н.в.',
+  '2024 - 2026',
   'Создание сайтов, поддержание их актуальности, обновление информации, исправление багов, добавление нового функционала.',
   '{"PHP", "HTML", "JavaScript", "TypeScript"}',
   '{"Создал сайт для поставок цемента из Ирана", "Разработал несколько новых разделов", "Создал систему парсинга товаров"}',
   'https://tk-cm.ru',
   'Москва',
-  true
+  false
 );
 
 INSERT INTO education (institution, degree, field, period, description, location)
