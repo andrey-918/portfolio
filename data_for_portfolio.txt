@@ -33,10 +33,10 @@ VALUES (
 
 INSERT INTO projects (title, description, technologies, image_url, github_url, live_url, category, created_at)
 VALUES (
-  'Cinema queue',
+  'Cinema',
   'Система конкурентного бронирования мест в кинотеатре',
   '{"Go", "Redis", "Docker"}',
-  '/portfolio.jpg',
+  '/cinema.png',
   'https://github.com/andrey-918/cinema-queue',
   'https://cinema-queue.ru',
   'Backend',
@@ -71,7 +71,7 @@ INSERT INTO projects (title, description, technologies, image_url, github_url, l
 VALUES (
   'Кофейня',
   'Элегантное веб-решение для современной кофейни: минималистичный интерфейс для клиентов и мощная система управления контентом для владельца. Возможность онлайн-обновления меню и публикации акций.',
-  '{"Go", "TypeScript", "React", "CSS", "Docker", "Postgres", "VPS"}',
+  '{"Go", "Docker", "Postgres", "TypeScript", "React"}',
   '/cafe.jpg',
   'https://github.com/andrey-918/cafe-between',
   'https://cafe-between.ru',
