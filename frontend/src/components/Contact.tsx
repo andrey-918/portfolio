@@ -220,7 +220,7 @@ export function Contact() {
         {/* Footer */}
         <div className="contact-footer">
           <p>
-            © 2025 Андрей Карганов. Все права защищены.
+            © 2026 Андрей Карганов. Все права защищены.
           </p>
         </div>
       </div>
