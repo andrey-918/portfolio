@@ -5,8 +5,7 @@ export function Contact() {
         <div className="contact-inner">
           <div className="contact-copy">
             <p className="eyebrow">Есть задача?</p>
-            <h2 className="contact-title">Давайте обсудим,<br />что можно сделать.</h2>
-            <p>Расскажите, что хочется улучшить — вместе найдём подходящее решение.</p>
+            <h2 className="contact-title">Давайте обсудим<br />вашу идею</h2>
           </div>
           <div className="contact-methods">
             <a className="contact-email" href="mailto:karganov.an@yandex.ru">
