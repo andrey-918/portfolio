@@ -22,7 +22,7 @@ const projects: Project[] = [
     details: 'Сервис бронирования для кинотеатра. В проекте проработана конкурентная запись на места с использованием Go и Redis.',
     technologies: ['Go', 'Redis', 'Docker'],
     video: '/projects/cinema-queue-demo.mp4',
-    poster: '/cinema.png',
+    poster: '/projects/cinema-queue-preview.jpg',
     website: 'https://cinema-queue.ru',
     github: 'https://github.com/andrey-918/cinema-queue',
   },
@@ -46,6 +46,7 @@ const projects: Project[] = [
     details: 'Демо сайта для кофейни: знакомство с заведением и его предложением через аккуратный веб-интерфейс.',
     technologies: ['Дизайн', 'Frontend'],
     video: '/projects/zharka-demo.mp4',
+    poster: '/projects/zharka-preview.jpg',
   },
   {
     id: 'cement',
@@ -96,7 +97,10 @@ export function Projects() {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <article className="project-card" key={project.id}>
+            <article
+              className={`project-card${index === 0 ? ' project-card-featured' : ''}`}
+              key={project.id}
+            >
               <div className="project-media">
                 {project.video ? (
                   <>

@@ -19,7 +19,7 @@ export function Navigation() {
             <a key={item.id} className="nav-link" href={`#${item.id}`}>{item.label}</a>
           ))}
         </div>
-        <a className="nav-contact" href="mailto:karganov.an@yandex.ru">Написать <span aria-hidden="true">↗</span></a>
+        <a className="nav-contact" href="https://t.me/andrey_918">Написать <span aria-hidden="true">↗</span></a>
         <button
           type="button"
           className="nav-mobile-btn"
