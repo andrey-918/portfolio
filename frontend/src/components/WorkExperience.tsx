@@ -60,7 +60,7 @@ export function WorkExperience() {
                 </div>
 
                 {item.achievements.length > 0 && <div className="experience-achievements">
-                  <h4 className="experience-achievements-title">В работе</h4>
+                  <h4 className="experience-achievements-title">Задачи и обязанности</h4>
                   <ul className="experience-achievements-list">
                     {item.achievements.map((achievement, achIndex) => (
                       <li key={achIndex}>{achievement}</li>
