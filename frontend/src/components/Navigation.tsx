@@ -36,7 +36,7 @@ export function Navigation() {
           {navItems.map((item) => (
             <a key={item.id} href={`#${item.id}`} onClick={() => setIsMobileMenuOpen(false)}>{item.label}</a>
           ))}
-          <a href="mailto:karganov.an@yandex.ru" onClick={() => setIsMobileMenuOpen(false)}>Написать мне ↗</a>
+          <a href="https://t.me/andrey_918" onClick={() => setIsMobileMenuOpen(false)}>Написать мне ↗</a>
         </div>
       )}
     </nav>
