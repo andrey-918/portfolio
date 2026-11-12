@@ -1,41 +1,41 @@
-import '../styles/about.css';
-import about1 from '../images/about-1.jpg'
-
 export function About() {
+  const capabilities = [
+    {
+      number: '01',
+      title: 'Сайты и веб-сервисы',
+      description: 'Дизайн и разработка с нуля: корпоративные сайты, лендинги, каталоги и сервисы с личной логикой.',
+    },
+    {
+      number: '02',
+      title: 'Интеграции и автоматизация',
+      description: 'Соединяю сайт с нужными системами и помогаю убрать ручные, повторяющиеся операции.',
+    },
+    {
+      number: '03',
+      title: 'ИИ в рабочих процессах',
+      description: 'Подбираю уместные сценарии для ИИ-инструментов и встраиваю их в существующий процесс.',
+    },
+  ];
+
   return (
     <section id="about" className="about-section">
       <div className="global-container">
-        <div className="about-grid">
-          {/* Left - Photo */}
-          <div className="photo-containerr">
-            <div className="section-badge-1">
-              <span className="section-badge-1-text">«Простота — это высшая степень сложности» — Леонардо да Винчи</span>
-            </div>
-            <div className="photo-wrapper">
-              <img
-                src={about1}
-                alt="Portrait"
-                className="photo"
-              />
-              <div className="image-bottom-badge">
-                <span className="image-bottom-badge-text">May 24, 2025</span>
-              </div>
-              <div className="about-accent-dot" />
-            </div>
-          </div>
-
-          {/* Right - Content */}
-          <div className="about-content">
-            <h2>
-              ПРИВЕТ, Я<br />
-              АНДРЕЙ
-            </h2>
-
-            <p className="about-description">
-              Full-stack разработчик с фокусом на создании интуитивных и эффективных digital-решений. 
-              Превращаю бизнес-задачи в чистый код и понятные интерфейсы.
-            </p>
-          </div>
+        <div className="about-heading">
+          <p className="eyebrow">Чем могу быть полезен</p>
+          <h2 className="section-title">Технологии — не цель.<br />Важно, что они меняют.</h2>
+          <p className="about-description">
+            Помогаю разобраться в задаче, выбрать подходящий формат и довести решение до запуска.
+            Беру на себя и интерфейс, и техническую часть.
+          </p>
+        </div>
+        <div className="capabilities-list">
+          {capabilities.map((capability) => (
+            <article className="capability-item" key={capability.number}>
+              <span className="capability-number">{capability.number}</span>
+              <h3>{capability.title}</h3>
+              <p>{capability.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

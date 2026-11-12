@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../styles/education.css';
-import educationPhoto1 from '../images/about-2.jpg'
 
 interface EducationItem {
   id: number;
@@ -24,66 +22,22 @@ export function Education() {
 
   return (
     <section id="education" className="education-section">
-      <div className="global-container ">
-        <div className="education-grid">
-          {/* Left - Content */}
-          <div className="education-content">
-            <div className="section-badge-2">
-              <span className="section-badge-2-text">«Я знаю, что ничего не знаю». — Сократ</span>
-            </div>
-
-            <h2 className="section-title">
-              УЧЁБА
-            </h2>
-
-            <p className="education-description">
-              Учёба — это не только лекции и экзамены, а настоящий путь к самосовершенствованию. Я прошел через университет и IT-курсы, где научился не бояться ошибок, думать творчески и превращать идеи в реальность. Это заложило фундамент для моей карьеры в IT, где каждый день — это шанс узнать что-то новое и создать что-то крутое.
-            </p>
-
-            {/* Education List */}
-            <div className="education-list">
-              {educationItems.map((item) => (
-                <div key={item.id} className="education-item">
-                  <div className="education-item-header">
-                    <h3>{item.institution}</h3>
-                    <div className="education-item-location-period">
-                      <span className="education-item-location">{item.location}</span>
-                      <span className="education-item-period">{item.period}</span>
-                    </div>
-                  </div>
-                  <div className="education-item-meta">
-                    <span className="education-item-degree">{item.degree}</span>
-                    <span className="education-item-field">{item.field}</span>
-                  </div>
-                  <p className="education-item-description">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right - Photo */}
-          <div className="photo-container">
-            <div className="photo-wrapper">
-              <img
-                src={educationPhoto1}
-                alt="Books and library"
-                className="photo"
-              />
-            </div>
-            <div className="image-bottom-badge">
-              <span className="image-bottom-badge-text">Oct 15, 2025</span>
-            </div>
-          </div>
-          {/* Education Quote */}
-            <div className="education-quote">
-              <blockquote>
-                "Образование — не подготовка к жизни, это сама жизнь."
-              </blockquote>
-              <cite>— Джон Дьюи</cite>
-          </div>
+      <div className="global-container">
+        <div className="education-heading">
+          <p className="eyebrow">База и развитие</p>
+          <h2 className="section-title">Образование</h2>
         </div>
+        <div className="education-list">
+          {educationItems.map((item) => (
+            <article className="education-item" key={item.id}>
+              <div>
+                <h3>{item.institution}</h3>
+                <p>{item.degree} · {item.field}</p>
+              </div>
+              <span className="education-item-period">{item.period}</span>
+            </article>
+          ))}
+          </div>
       </div>
     </section>
   );
