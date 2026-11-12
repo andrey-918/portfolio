@@ -5,13 +5,13 @@ export function Hero() {
     <section id="home" className="hero-section">
       <div className="global-container hero-content">
         <div className="hero-copy">
-          <p className="eyebrow">Веб-разработка для бизнеса · Москва / удалённо</p>
+          <p className="eyebrow">Веб-разработка · Москва / удалённо</p>
           <h1 className="hero-h1">
             Создаю сайты,<br />
             <span>которые работают.</span>
           </h1>
           <p className="hero-intro">
-            Проектирую и разрабатываю веб-сервисы и сайты для компаний —
+            Проектирую и разрабатываю веб-сервисы и сайты —
             от первого обсуждения задачи до запуска и поддержки.
           </p>
           <div className="hero-actions">
