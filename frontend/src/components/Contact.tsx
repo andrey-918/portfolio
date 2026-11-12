@@ -1,3 +1,5 @@
+import { scrollToSection } from '../utils/scrollToSection';
+
 export function Contact() {
   return (
     <section id="contact" className="contact-section">
@@ -19,7 +21,15 @@ export function Contact() {
           </div>
         </div>
         <div className="contact-footer">
-          <a href="#home">Андрей Карганов</a>
+          <a
+            href="#home"
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToSection('home');
+            }}
+          >
+            Андрей Карганов
+          </a>
           <p>© {new Date().getFullYear()} · Сделано с вниманием к деталям</p>
         </div>
       </div>

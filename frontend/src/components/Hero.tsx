@@ -1,4 +1,5 @@
 import portrait from '../images/about-1.jpg';
+import { scrollToSection } from '../utils/scrollToSection';
 
 export function Hero() {
   return (
@@ -15,7 +16,16 @@ export function Hero() {
             от первого обсуждения задачи до запуска и поддержки.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#projects">Смотреть проекты <span aria-hidden="true">↘</span></a>
+            <a
+              className="button button-dark"
+              href="#projects"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection('projects');
+              }}
+            >
+              Смотреть проекты <span aria-hidden="true">↘</span>
+            </a>
             <a className="text-link" href="https://t.me/andrey_918">Обсудить задачу <span aria-hidden="true">↗</span></a>
           </div>
           <p className="hero-note">Понятный процесс, прямое общение, без лишних посредников.</p>
