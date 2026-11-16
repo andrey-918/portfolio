@@ -35,7 +35,7 @@ const projects: Project[] = [
     technologies: ['Go', 'PostgreSQL', 'React'],
     video: '/projects/cafe-between-demo.mp4',
     poster: '/cafe.jpg',
-    website: 'https://cafe-between.ru',
+    website: 'https://art-cafe.site',
     github: 'https://github.com/andrey-918/cafe-between',
   },
   {
